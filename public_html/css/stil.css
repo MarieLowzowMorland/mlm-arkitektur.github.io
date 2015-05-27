@@ -1,0 +1,191 @@
+body {
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  color: #969696;
+}
+.hoved-meny > a {
+  text-decoration: none;
+  color: #787878;
+  color: white;
+  font-size: 14px;
+  padding: 0 7px;
+}
+.hoved-meny > a:first-child {
+  padding-left: 0;
+}
+.hoved-meny > a:last-child {
+  padding-right: 0;
+}
+.hoved-meny > a > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 91px;
+  height: 91px;
+}
+.hoved-meny > a > div#meg {
+  background-image: url('../bilder/autogenerert/meny/meg.jpg');
+}
+.hoved-meny > a > div#foto {
+  background-image: url('../bilder/autogenerert/meny/foto.jpg');
+}
+.hoved-meny > a > div#arkitektur {
+  background-image: url('../bilder/autogenerert/meny/arkitektur.jpg');
+}
+.hoved-meny > a > div#tegning {
+  background-image: url('../bilder/autogenerert/meny/tegning.png');
+}
+.hoved-meny > a > div > div.skygge {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 91px;
+  box-sizing: border-box;
+}
+.hoved-meny > a > div > div.skygge:hover,
+.hoved-meny > a > div > div.skygge.aktiv {
+  background-color: transparent;
+}
+.hoved-meny > a > div > div.tekst {
+  margin: -18px;
+}
+#logo {
+  text-align: center;
+  padding-bottom: 80px;
+  color: #787878;
+}
+#logo > a {
+  font-size: 30px;
+  text-decoration: none;
+  color: #787878;
+}
+#logo > div {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.meny-vindu {
+  width: 420px;
+  margin: auto;
+  margin-top: calc(50vh - 200px);
+}
+.meny-vindu > .meny > a {
+  text-decoration: none;
+  color: #787878;
+  color: white;
+  font-size: 14px;
+  padding: 0 7px;
+}
+.meny-vindu > .meny > a:first-child {
+  padding-left: 0;
+}
+.meny-vindu > .meny > a:last-child {
+  padding-right: 0;
+}
+.meny-vindu > .meny > a > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 91px;
+  height: 91px;
+}
+.meny-vindu > .meny > a > div#meg {
+  background-image: url('../bilder/autogenerert/meny/meg.jpg');
+}
+.meny-vindu > .meny > a > div#foto {
+  background-image: url('../bilder/autogenerert/meny/foto.jpg');
+}
+.meny-vindu > .meny > a > div#arkitektur {
+  background-image: url('../bilder/autogenerert/meny/arkitektur.jpg');
+}
+.meny-vindu > .meny > a > div#tegning {
+  background-image: url('../bilder/autogenerert/meny/tegning.png');
+}
+.meny-vindu > .meny > a > div > div.skygge {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 91px;
+  box-sizing: border-box;
+}
+.meny-vindu > .meny > a > div > div.skygge:hover,
+.meny-vindu > .meny > a > div > div.skygge.aktiv {
+  background-color: transparent;
+}
+.meny-vindu > .meny > a > div > div.tekst {
+  margin: -18px;
+}
+.sidemeny {
+  padding: 40px;
+  box-sizing: border-box;
+  vertical-align: top;
+  display: inline-block;
+  width: 500px;
+  height: 100%;
+}
+.sidemeny > .topp-venstre > .meny-vindu {
+  width: 100%;
+  margin: inherit;
+  margin-top: 0;
+}
+.sidemeny > .topp-venstre > .meny-vindu > .undermeny {
+  margin: 30px 0 60px;
+}
+.sidemeny > .topp-venstre > .meny-vindu > .undermeny > a {
+  text-decoration: none;
+  color: #787878;
+  color: #d1d1d1;
+  font-size: 14px;
+  padding: 0 7px;
+  text-align: center;
+}
+.sidemeny > .topp-venstre > .meny-vindu > .undermeny > a:first-child {
+  padding-left: 0;
+}
+.sidemeny > .topp-venstre > .meny-vindu > .undermeny > a:last-child {
+  padding-right: 0;
+}
+.sidemeny > .topp-venstre > .meny-vindu > .undermeny > a:hover,
+.sidemeny > .topp-venstre > .meny-vindu > .undermeny > a.aktiv {
+  color: #787878;
+}
+.sidemeny > .topp-venstre > .meny-vindu > .undermeny > a > div {
+  min-width: 91px;
+  width: 91px;
+  max-width: 91px;
+  display: inline-block;
+}
+.sidemeny > .nede-venstre > .tekst-innhold {
+  font-size: 0.8em;
+}
+.hoved {
+  padding: 40px 40px 160px 0;
+  box-sizing: border-box;
+  vertical-align: top;
+  display: inline-block;
+  width: calc(100% - 500px - 5px);
+}
+.hoved .stort_bilde {
+  width: 100%;
+  height: calc(100vh - 5*40px);
+  min-height: 100%;
+  min-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.right-aligned {
+  text-align: right;
+}
+.ustilert {
+  text-decoration: none;
+  color: #787878;
+}
+.bakgrunnbilde-innstillinger {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+/*# sourceMappingURL=stil.css.map */

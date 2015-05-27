@@ -1,0 +1,189 @@
+@tittelfarge: rgb(120, 120, 120);
+@sidefarge: rgb(150, 150, 150);
+@padding-rundt-innhold: 40px;
+@sidemeny-bredde: 500px;
+@meny-element-bredde: ((@sidemeny-bredde - 136) / 4);
+
+body{
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    color: @sidefarge;
+}
+
+.hoved-meny{
+    > a{
+        .ustilert();
+        color: white;
+        font-size: 14px;
+        padding: 0 7px;
+
+        &:first-child{
+            padding-left: 0;
+        }
+
+        &:last-child{
+            padding-right: 0;
+        }
+
+        > div{
+            .bakgrunnbilde-innstillinger();
+
+            vertical-align: top;
+            display: inline-block;
+            text-align: center;
+            width: @meny-element-bredde;
+            height: @meny-element-bredde;
+
+            &#meg{
+                background-image: url('../bilder/autogenerert/meny/meg.jpg');
+            }
+
+            &#foto{
+                background-image: url('../bilder/autogenerert/meny/foto.jpg');
+            }
+
+            &#arkitektur{
+                background-image: url('../bilder/autogenerert/meny/arkitektur.jpg');
+            }
+
+            &#tegning{
+                background-image: url('../bilder/autogenerert/meny/tegning.png');
+            }
+
+            > div{
+
+                &.skygge{
+                    position: relative;
+                    background-color: rgba(255,255,255,0.5);
+                    height: @meny-element-bredde;
+                    box-sizing: border-box;
+
+                    &:hover, &.aktiv{
+                        background-color: transparent;
+                    }
+                }
+
+                &.tekst{
+                    margin: -18px;
+                }
+            }
+        }
+    }
+}
+
+#logo{
+    text-align: center;
+    padding-bottom: (2 * @padding-rundt-innhold);
+    color: @tittelfarge;
+
+    > a{
+        font-size: 30px;
+        .ustilert();
+        color: @tittelfarge;
+    }
+
+    > div{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+
+.meny-vindu{
+    width: (@sidemeny-bredde - 80px);
+    margin: auto;
+    margin-top: calc(50vh - 200px);
+    
+    > .meny{
+        .hoved-meny();
+    }
+}
+
+.sidemeny{
+    padding: @padding-rundt-innhold;
+    box-sizing: border-box;
+    vertical-align: top;
+    display: inline-block;
+    width: @sidemeny-bredde;
+    height: 100%;
+
+
+    > .topp-venstre{
+
+        > .meny-vindu{
+            width: 100%;
+            margin: inherit;
+            margin-top: 0;
+            
+            > .undermeny{
+                margin: 30px 0 60px;
+
+                > a{
+                    .ustilert();
+                    color: lighten(@tittelfarge, 35%);
+                    font-size: 14px;
+                    padding: 0 7px;
+                    text-align: center;
+                    
+                    &:first-child{
+                        padding-left: 0;
+                    }
+                    
+                    &:last-child{
+                        padding-right: 0;
+                    }
+
+                    &:hover, &.aktiv{
+                        color: @tittelfarge;
+                    }
+                    
+                    > div {
+                        .krev-bredde(@meny-element-bredde);
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    
+    > .nede-venstre{
+        > .tekst-innhold{
+            font-size: 0.8em;
+        }
+    }
+}
+
+.hoved{
+    padding: @padding-rundt-innhold @padding-rundt-innhold (4*@padding-rundt-innhold) 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    display: inline-block;
+    width: calc(100% - @sidemeny-bredde - 5px);
+    
+    .stort_bilde{
+        width: 100%;
+        height: calc(100vh - 5*@padding-rundt-innhold);
+        min-height: 100%;
+        min-width: 100%;
+        .bakgrunnbilde-innstillinger();
+    }
+}
+
+.right-aligned{
+    text-align: right;
+}
+
+.ustilert{
+    text-decoration: none;
+    color: @tittelfarge;
+}
+
+.bakgrunnbilde-innstillinger{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+}
+
+.krev-bredde(@bredde){
+    min-width: @bredde;
+    width: @bredde;
+    max-width: @bredde;
+}
