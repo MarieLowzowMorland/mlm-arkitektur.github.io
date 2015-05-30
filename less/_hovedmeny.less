@@ -1,0 +1,99 @@
+.imp-hovedmeny(){    
+    .hoved-meny{
+        > a{
+            .ustilert();
+            color: white;
+            font-size: 14px;
+            padding: 0 @meny-element-padding;
+            box-sizing: border-box;
+
+            > div{
+                .bakgrunnbilde-innstillinger();
+
+                vertical-align: top;
+                display: inline-block;
+                box-sizing: border-box;
+                text-align: center;
+                width: @meny-element-bredde;
+                height: @meny-element-bredde;
+
+                &#meg{
+                    background-image: url('../bilder/autogenerert/meny/meg.jpg');
+                }
+
+                &#foto{
+                    background-image: url('../bilder/autogenerert/meny/foto.jpg');
+                }
+
+                &#arkitektur{
+                    background-image: url('../bilder/autogenerert/meny/arkitektur.jpg');
+                }
+
+                &#tegning{
+                    background-image: url('../bilder/autogenerert/meny/tegning.png');
+                }
+
+                > div{
+                    box-sizing: border-box;
+
+                    &.skygge{
+                        position: relative;
+                        background-color: rgba(255,255,255,0.5);
+                        height: @meny-element-bredde;
+                        box-sizing: border-box;
+
+                        &:hover, &.aktiv{
+                            background-color: transparent;
+                        }
+                    }
+
+                    &.tekst{
+                        margin: -18px;
+                    }
+                }
+            }
+        }
+    }
+
+    #logo{
+        text-align: center;
+        padding-bottom: (@padding-rundt-innhold);
+        color: @tittelfarge;
+
+        > a{
+            font-size: 30px;
+            .ustilert();
+            color: @tittelfarge;
+        }
+
+        > div{
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+
+    .meny-vindu{
+        width: calc(@sidemeny-bredde - 80px);
+        margin: auto;
+        margin-top: calc(50vh - 200px);
+        height: @meny-height;
+        .transisjon(1s);
+
+        > .meny{
+            .hoved-meny();
+        }
+
+        &.ut{
+            .transisjon(1s);
+            opacity: 0; 
+            height: 0;
+            overflow: hidden;
+        }
+
+        &.inn{
+            .transisjon(1s);
+            opacity: 1;
+            height: auto;
+        }
+    }
+}

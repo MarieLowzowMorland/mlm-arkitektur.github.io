@@ -1,0 +1,47 @@
+.imp-sidemeny(){    
+    .sidemeny{
+        padding: @padding-rundt-innhold;
+        box-sizing: border-box;
+        vertical-align: top;
+        display: inline-block;
+        width: @sidemeny-bredde;
+        height: 100%;
+
+
+        > .topp-venstre{
+
+            > .meny-vindu{
+                width: 100%;
+                margin: inherit;
+                margin-top: 0;
+
+                > .undermeny{
+                    margin: 15px 0 30px;
+
+                    > a{
+                        .ustilert();
+                        color: lighten(@tittelfarge, 35%);
+                        font-size: 14px;
+                        padding: 0 @meny-element-padding;
+                        text-align: center;
+
+                        &:hover, &.aktiv{
+                            color: @tittelfarge;
+                        }
+
+                        > div {
+                            .krev-bredde(@meny-element-bredde);
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+
+        > .nede-venstre{
+            > .tekst-innhold{
+                font-size: 0.8em;
+            }
+        }
+    }
+}

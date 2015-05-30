@@ -18,6 +18,10 @@
         <script src="js/kontroller/lenkeCtrl.js"></script>
     </head>
     <body>
-        <div ui-view></div>
+        <div class="sidemeny">
+            <div ui-view="topp-venstre" class="topp-venstre"></div>
+            <div ui-view="nede-venstre" class="nede-venstre"></div>
+        </div>
+        <div ui-view="hovedvindu" class="hoved"></div>
     </body>
 </html>

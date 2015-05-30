@@ -2,18 +2,18 @@ var hjemmesideApp = angular.module('marieApp', ['ui.router']);
 
 hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
+        "use strict";
         $urlRouterProvider.otherwise('/');
         
         $stateProvider
         .state('home', {
             url:'',
-            templateUrl: 'templates/oppeVenstre/lenker.html'
+            views: {
+              "topp-venstre": { templateUrl: 'templates/oppeVenstre/lenker.html' },
+              "hovedvindu": { templateUrl: 'templates/velkomstbilde.html'}
+            }
         })
-        .state('side', {
-            url:'',
-            templateUrl: 'templates/sidestruktur.html'
-        })
-        .state('side.om', {
+        .state('om', {
             url:'/meg/om',
             views: {
               "topp-venstre": { templateUrl: 'templates/oppeVenstre/lenker.html', controller: 'LenkeCtrl' },
@@ -21,7 +21,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
               "nede-venstre": { templateUrl: 'templates/nedeVenstre/meg.html' }
             }
         })
-        .state('side.filosofi', {
+        .state('filosofi', {
             url:'/meg/filosofi',
             views: {
               "topp-venstre": { templateUrl: 'templates/oppeVenstre/lenker.html', controller: 'LenkeCtrl' },
@@ -29,7 +29,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
               "nede-venstre": { templateUrl: 'templates/nedeVenstre/filosofi.html' }
             }
         })
-        .state('side.arkitektur', {
+        .state('arkitektur', {
             url:'/arkitektur',
             views: {
               "topp-venstre": { templateUrl: 'templates/oppeVenstre/lenker.html', controller: 'LenkeCtrl' },

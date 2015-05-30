@@ -1,0 +1,62 @@
+.transisjon(@sekunder){
+    -webkit-transition: opacity @sekunder, width @sekunder, height @sekunder;
+    transition: opacity @sekunder, width @sekunder, height @sekunder;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+}
+
+.krev-bredde(@bredde){
+    min-width: @bredde;
+    width: @bredde;
+    max-width: @bredde;
+}
+
+@media screen {
+    @media (max-width: 768px) {
+        .velkomstbilde{
+            display: none;
+        }
+    }
+    
+    @media (min-width: 500px) {
+
+        .gjemStorSkjerm{
+            display: none;
+        }
+    }
+}
+
+.gjemStorSkjerm{
+    min-height: 16px;
+    min-width: 16px;
+}
+
+.velkomstbilde{
+    .bakgrunnbilde-innstillinger();
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-image: url('../bilder/autogenerert/velkomstbilde.jpg');
+}
+
+.vis-og-skjul-meny{
+    text-align: center;
+}
+
+.right-aligned{
+    text-align: right;
+}
+
+.ustilert{
+    text-decoration: none;
+    color: @tittelfarge;
+}
+
+.bakgrunnbilde-innstillinger{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+}

@@ -1,180 +1,31 @@
-body {
-  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
-  color: #969696;
+@media screen and (max-width: 768px) {
+  .velkomstbilde {
+    display: none;
+  }
 }
-.hoved-meny > a {
-  text-decoration: none;
-  color: #787878;
-  color: white;
-  font-size: 14px;
-  padding: 0 7px;
+@media screen and (min-width: 500px) {
+  .gjemStorSkjerm {
+    display: none;
+  }
 }
-.hoved-meny > a:first-child {
-  padding-left: 0;
+.gjemStorSkjerm {
+  min-height: 16px;
+  min-width: 16px;
 }
-.hoved-meny > a:last-child {
-  padding-right: 0;
-}
-.hoved-meny > a > div {
+.velkomstbilde {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  vertical-align: top;
-  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  background-image: url('../bilder/autogenerert/velkomstbilde.jpg');
+}
+.vis-og-skjul-meny {
   text-align: center;
-  width: 91px;
-  height: 91px;
-}
-.hoved-meny > a > div#meg {
-  background-image: url('../bilder/autogenerert/meny/meg.jpg');
-}
-.hoved-meny > a > div#foto {
-  background-image: url('../bilder/autogenerert/meny/foto.jpg');
-}
-.hoved-meny > a > div#arkitektur {
-  background-image: url('../bilder/autogenerert/meny/arkitektur.jpg');
-}
-.hoved-meny > a > div#tegning {
-  background-image: url('../bilder/autogenerert/meny/tegning.png');
-}
-.hoved-meny > a > div > div.skygge {
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.5);
-  height: 91px;
-  box-sizing: border-box;
-}
-.hoved-meny > a > div > div.skygge:hover,
-.hoved-meny > a > div > div.skygge.aktiv {
-  background-color: transparent;
-}
-.hoved-meny > a > div > div.tekst {
-  margin: -18px;
-}
-#logo {
-  text-align: center;
-  padding-bottom: 80px;
-  color: #787878;
-}
-#logo > a {
-  font-size: 30px;
-  text-decoration: none;
-  color: #787878;
-}
-#logo > div {
-  font-size: 14px;
-  margin-top: 10px;
-}
-.meny-vindu {
-  width: 420px;
-  margin: auto;
-  margin-top: calc(50vh - 200px);
-}
-.meny-vindu > .meny > a {
-  text-decoration: none;
-  color: #787878;
-  color: white;
-  font-size: 14px;
-  padding: 0 7px;
-}
-.meny-vindu > .meny > a:first-child {
-  padding-left: 0;
-}
-.meny-vindu > .meny > a:last-child {
-  padding-right: 0;
-}
-.meny-vindu > .meny > a > div {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  vertical-align: top;
-  display: inline-block;
-  text-align: center;
-  width: 91px;
-  height: 91px;
-}
-.meny-vindu > .meny > a > div#meg {
-  background-image: url('../bilder/autogenerert/meny/meg.jpg');
-}
-.meny-vindu > .meny > a > div#foto {
-  background-image: url('../bilder/autogenerert/meny/foto.jpg');
-}
-.meny-vindu > .meny > a > div#arkitektur {
-  background-image: url('../bilder/autogenerert/meny/arkitektur.jpg');
-}
-.meny-vindu > .meny > a > div#tegning {
-  background-image: url('../bilder/autogenerert/meny/tegning.png');
-}
-.meny-vindu > .meny > a > div > div.skygge {
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.5);
-  height: 91px;
-  box-sizing: border-box;
-}
-.meny-vindu > .meny > a > div > div.skygge:hover,
-.meny-vindu > .meny > a > div > div.skygge.aktiv {
-  background-color: transparent;
-}
-.meny-vindu > .meny > a > div > div.tekst {
-  margin: -18px;
-}
-.sidemeny {
-  padding: 40px;
-  box-sizing: border-box;
-  vertical-align: top;
-  display: inline-block;
-  width: 500px;
-  height: 100%;
-}
-.sidemeny > .topp-venstre > .meny-vindu {
-  width: 100%;
-  margin: inherit;
-  margin-top: 0;
-}
-.sidemeny > .topp-venstre > .meny-vindu > .undermeny {
-  margin: 30px 0 60px;
-}
-.sidemeny > .topp-venstre > .meny-vindu > .undermeny > a {
-  text-decoration: none;
-  color: #787878;
-  color: #d1d1d1;
-  font-size: 14px;
-  padding: 0 7px;
-  text-align: center;
-}
-.sidemeny > .topp-venstre > .meny-vindu > .undermeny > a:first-child {
-  padding-left: 0;
-}
-.sidemeny > .topp-venstre > .meny-vindu > .undermeny > a:last-child {
-  padding-right: 0;
-}
-.sidemeny > .topp-venstre > .meny-vindu > .undermeny > a:hover,
-.sidemeny > .topp-venstre > .meny-vindu > .undermeny > a.aktiv {
-  color: #787878;
-}
-.sidemeny > .topp-venstre > .meny-vindu > .undermeny > a > div {
-  min-width: 91px;
-  width: 91px;
-  max-width: 91px;
-  display: inline-block;
-}
-.sidemeny > .nede-venstre > .tekst-innhold {
-  font-size: 0.8em;
-}
-.hoved {
-  padding: 40px 40px 160px 0;
-  box-sizing: border-box;
-  vertical-align: top;
-  display: inline-block;
-  width: calc(100% - 500px - 5px);
-}
-.hoved .stort_bilde {
-  width: 100%;
-  height: calc(100vh - 5*40px);
-  min-height: 100%;
-  min-width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 .right-aligned {
   text-align: right;
@@ -187,5 +38,580 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+body {
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  color: #969696;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  body .hoved-meny > a {
+    text-decoration: none;
+    color: #787878;
+    color: white;
+    font-size: 14px;
+    padding: 0 7px;
+    box-sizing: border-box;
+  }
+  body .hoved-meny > a > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    width: calc((500px - 152px) / 4);
+    height: calc((500px - 152px) / 4);
+  }
+  body .hoved-meny > a > div#meg {
+    background-image: url('../bilder/autogenerert/meny/meg.jpg');
+  }
+  body .hoved-meny > a > div#foto {
+    background-image: url('../bilder/autogenerert/meny/foto.jpg');
+  }
+  body .hoved-meny > a > div#arkitektur {
+    background-image: url('../bilder/autogenerert/meny/arkitektur.jpg');
+  }
+  body .hoved-meny > a > div#tegning {
+    background-image: url('../bilder/autogenerert/meny/tegning.png');
+  }
+  body .hoved-meny > a > div > div {
+    box-sizing: border-box;
+  }
+  body .hoved-meny > a > div > div.skygge {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: calc((500px - 152px) / 4);
+    box-sizing: border-box;
+  }
+  body .hoved-meny > a > div > div.skygge:hover,
+  body .hoved-meny > a > div > div.skygge.aktiv {
+    background-color: transparent;
+  }
+  body .hoved-meny > a > div > div.tekst {
+    margin: -18px;
+  }
+  body #logo {
+    text-align: center;
+    padding-bottom: 40px;
+    color: #787878;
+  }
+  body #logo > a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #787878;
+  }
+  body #logo > div {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  body .meny-vindu {
+    width: calc(500px - 80px);
+    margin: auto;
+    margin-top: calc(50vh - 200px);
+    height: auto;
+    -webkit-transition: opacity 1s, width 1s, height 1s;
+    transition: opacity 1s, width 1s, height 1s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+  body .meny-vindu > .meny > a {
+    text-decoration: none;
+    color: #787878;
+    color: white;
+    font-size: 14px;
+    padding: 0 7px;
+    box-sizing: border-box;
+  }
+  body .meny-vindu > .meny > a > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    width: calc((500px - 152px) / 4);
+    height: calc((500px - 152px) / 4);
+  }
+  body .meny-vindu > .meny > a > div#meg {
+    background-image: url('../bilder/autogenerert/meny/meg.jpg');
+  }
+  body .meny-vindu > .meny > a > div#foto {
+    background-image: url('../bilder/autogenerert/meny/foto.jpg');
+  }
+  body .meny-vindu > .meny > a > div#arkitektur {
+    background-image: url('../bilder/autogenerert/meny/arkitektur.jpg');
+  }
+  body .meny-vindu > .meny > a > div#tegning {
+    background-image: url('../bilder/autogenerert/meny/tegning.png');
+  }
+  body .meny-vindu > .meny > a > div > div {
+    box-sizing: border-box;
+  }
+  body .meny-vindu > .meny > a > div > div.skygge {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: calc((500px - 152px) / 4);
+    box-sizing: border-box;
+  }
+  body .meny-vindu > .meny > a > div > div.skygge:hover,
+  body .meny-vindu > .meny > a > div > div.skygge.aktiv {
+    background-color: transparent;
+  }
+  body .meny-vindu > .meny > a > div > div.tekst {
+    margin: -18px;
+  }
+  body .meny-vindu.ut {
+    -webkit-transition: opacity 1s, width 1s, height 1s;
+    transition: opacity 1s, width 1s, height 1s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  body .meny-vindu.inn {
+    -webkit-transition: opacity 1s, width 1s, height 1s;
+    transition: opacity 1s, width 1s, height 1s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 1;
+    height: auto;
+  }
+  body .sidemeny {
+    padding: 40px;
+    box-sizing: border-box;
+    vertical-align: top;
+    display: inline-block;
+    width: 500px;
+    height: 100%;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu {
+    width: 100%;
+    margin: inherit;
+    margin-top: 0;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny {
+    margin: 15px 0 30px;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a {
+    text-decoration: none;
+    color: #787878;
+    color: #d1d1d1;
+    font-size: 14px;
+    padding: 0 7px;
+    text-align: center;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a:hover,
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a.aktiv {
+    color: #787878;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a > div {
+    min-width: calc((500px - 152px) / 4);
+    width: calc((500px - 152px) / 4);
+    max-width: calc((500px - 152px) / 4);
+    display: inline-block;
+  }
+  body .sidemeny > .nede-venstre > .tekst-innhold {
+    font-size: 0.8em;
+  }
+  body .hoved {
+    padding: 40px 40px 80px 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    display: inline-block;
+    width: calc(100% - 500px - 5px);
+  }
+  body .hoved .stort_bilde {
+    width: 100%;
+    height: calc(100vh - 3*40px);
+    min-height: 100%;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media screen and (max-width: 500px) {
+  body .hoved-meny > a {
+    text-decoration: none;
+    color: #787878;
+    color: white;
+    font-size: 14px;
+    padding: 0 7px;
+    box-sizing: border-box;
+  }
+  body .hoved-meny > a > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    width: calc((100vw - 114px) / 2);
+    height: calc((100vw - 114px) / 2);
+  }
+  body .hoved-meny > a > div#meg {
+    background-image: url('../bilder/autogenerert/meny/meg.jpg');
+  }
+  body .hoved-meny > a > div#foto {
+    background-image: url('../bilder/autogenerert/meny/foto.jpg');
+  }
+  body .hoved-meny > a > div#arkitektur {
+    background-image: url('../bilder/autogenerert/meny/arkitektur.jpg');
+  }
+  body .hoved-meny > a > div#tegning {
+    background-image: url('../bilder/autogenerert/meny/tegning.png');
+  }
+  body .hoved-meny > a > div > div {
+    box-sizing: border-box;
+  }
+  body .hoved-meny > a > div > div.skygge {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: calc((100vw - 114px) / 2);
+    box-sizing: border-box;
+  }
+  body .hoved-meny > a > div > div.skygge:hover,
+  body .hoved-meny > a > div > div.skygge.aktiv {
+    background-color: transparent;
+  }
+  body .hoved-meny > a > div > div.tekst {
+    margin: -18px;
+  }
+  body #logo {
+    text-align: center;
+    padding-bottom: 40px;
+    color: #787878;
+  }
+  body #logo > a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #787878;
+  }
+  body #logo > div {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  body .meny-vindu {
+    width: calc(100vw - 80px);
+    margin: auto;
+    margin-top: calc(50vh - 200px);
+    height: 300px;
+    -webkit-transition: opacity 1s, width 1s, height 1s;
+    transition: opacity 1s, width 1s, height 1s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+  body .meny-vindu > .meny > a {
+    text-decoration: none;
+    color: #787878;
+    color: white;
+    font-size: 14px;
+    padding: 0 7px;
+    box-sizing: border-box;
+  }
+  body .meny-vindu > .meny > a > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    width: calc((100vw - 114px) / 2);
+    height: calc((100vw - 114px) / 2);
+  }
+  body .meny-vindu > .meny > a > div#meg {
+    background-image: url('../bilder/autogenerert/meny/meg.jpg');
+  }
+  body .meny-vindu > .meny > a > div#foto {
+    background-image: url('../bilder/autogenerert/meny/foto.jpg');
+  }
+  body .meny-vindu > .meny > a > div#arkitektur {
+    background-image: url('../bilder/autogenerert/meny/arkitektur.jpg');
+  }
+  body .meny-vindu > .meny > a > div#tegning {
+    background-image: url('../bilder/autogenerert/meny/tegning.png');
+  }
+  body .meny-vindu > .meny > a > div > div {
+    box-sizing: border-box;
+  }
+  body .meny-vindu > .meny > a > div > div.skygge {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: calc((100vw - 114px) / 2);
+    box-sizing: border-box;
+  }
+  body .meny-vindu > .meny > a > div > div.skygge:hover,
+  body .meny-vindu > .meny > a > div > div.skygge.aktiv {
+    background-color: transparent;
+  }
+  body .meny-vindu > .meny > a > div > div.tekst {
+    margin: -18px;
+  }
+  body .meny-vindu.ut {
+    -webkit-transition: opacity 1s, width 1s, height 1s;
+    transition: opacity 1s, width 1s, height 1s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  body .meny-vindu.inn {
+    -webkit-transition: opacity 1s, width 1s, height 1s;
+    transition: opacity 1s, width 1s, height 1s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 1;
+    height: auto;
+  }
+  body .sidemeny {
+    padding: 40px;
+    box-sizing: border-box;
+    vertical-align: top;
+    display: inline-block;
+    width: 100vw;
+    height: 100%;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu {
+    width: 100%;
+    margin: inherit;
+    margin-top: 0;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny {
+    margin: 15px 0 30px;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a {
+    text-decoration: none;
+    color: #787878;
+    color: #d1d1d1;
+    font-size: 14px;
+    padding: 0 7px;
+    text-align: center;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a:hover,
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a.aktiv {
+    color: #787878;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a > div {
+    min-width: calc((100vw - 114px) / 2);
+    width: calc((100vw - 114px) / 2);
+    max-width: calc((100vw - 114px) / 2);
+    display: inline-block;
+  }
+  body .sidemeny > .nede-venstre > .tekst-innhold {
+    font-size: 0.8em;
+  }
+  body .hoved {
+    padding: 40px 0 80px 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+  }
+  body .hoved .stort_bilde {
+    width: 100%;
+    height: calc(100vh - 3*40px);
+    min-height: 100%;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 500px) {
+  body .hoved-meny > a {
+    text-decoration: none;
+    color: #787878;
+    color: white;
+    font-size: 14px;
+    padding: 0 7px;
+    box-sizing: border-box;
+  }
+  body .hoved-meny > a > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    width: calc((100vw - 152px) / 4);
+    height: calc((100vw - 152px) / 4);
+  }
+  body .hoved-meny > a > div#meg {
+    background-image: url('../bilder/autogenerert/meny/meg.jpg');
+  }
+  body .hoved-meny > a > div#foto {
+    background-image: url('../bilder/autogenerert/meny/foto.jpg');
+  }
+  body .hoved-meny > a > div#arkitektur {
+    background-image: url('../bilder/autogenerert/meny/arkitektur.jpg');
+  }
+  body .hoved-meny > a > div#tegning {
+    background-image: url('../bilder/autogenerert/meny/tegning.png');
+  }
+  body .hoved-meny > a > div > div {
+    box-sizing: border-box;
+  }
+  body .hoved-meny > a > div > div.skygge {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: calc((100vw - 152px) / 4);
+    box-sizing: border-box;
+  }
+  body .hoved-meny > a > div > div.skygge:hover,
+  body .hoved-meny > a > div > div.skygge.aktiv {
+    background-color: transparent;
+  }
+  body .hoved-meny > a > div > div.tekst {
+    margin: -18px;
+  }
+  body #logo {
+    text-align: center;
+    padding-bottom: 40px;
+    color: #787878;
+  }
+  body #logo > a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #787878;
+  }
+  body #logo > div {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  body .meny-vindu {
+    width: calc(100vw - 80px);
+    margin: auto;
+    margin-top: calc(50vh - 200px);
+    height: 300px;
+    -webkit-transition: opacity 1s, width 1s, height 1s;
+    transition: opacity 1s, width 1s, height 1s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+  body .meny-vindu > .meny > a {
+    text-decoration: none;
+    color: #787878;
+    color: white;
+    font-size: 14px;
+    padding: 0 7px;
+    box-sizing: border-box;
+  }
+  body .meny-vindu > .meny > a > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    width: calc((100vw - 152px) / 4);
+    height: calc((100vw - 152px) / 4);
+  }
+  body .meny-vindu > .meny > a > div#meg {
+    background-image: url('../bilder/autogenerert/meny/meg.jpg');
+  }
+  body .meny-vindu > .meny > a > div#foto {
+    background-image: url('../bilder/autogenerert/meny/foto.jpg');
+  }
+  body .meny-vindu > .meny > a > div#arkitektur {
+    background-image: url('../bilder/autogenerert/meny/arkitektur.jpg');
+  }
+  body .meny-vindu > .meny > a > div#tegning {
+    background-image: url('../bilder/autogenerert/meny/tegning.png');
+  }
+  body .meny-vindu > .meny > a > div > div {
+    box-sizing: border-box;
+  }
+  body .meny-vindu > .meny > a > div > div.skygge {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: calc((100vw - 152px) / 4);
+    box-sizing: border-box;
+  }
+  body .meny-vindu > .meny > a > div > div.skygge:hover,
+  body .meny-vindu > .meny > a > div > div.skygge.aktiv {
+    background-color: transparent;
+  }
+  body .meny-vindu > .meny > a > div > div.tekst {
+    margin: -18px;
+  }
+  body .meny-vindu.ut {
+    -webkit-transition: opacity 1s, width 1s, height 1s;
+    transition: opacity 1s, width 1s, height 1s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  body .meny-vindu.inn {
+    -webkit-transition: opacity 1s, width 1s, height 1s;
+    transition: opacity 1s, width 1s, height 1s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 1;
+    height: auto;
+  }
+  body .sidemeny {
+    padding: 40px;
+    box-sizing: border-box;
+    vertical-align: top;
+    display: inline-block;
+    width: 100vw;
+    height: 100%;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu {
+    width: 100%;
+    margin: inherit;
+    margin-top: 0;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny {
+    margin: 15px 0 30px;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a {
+    text-decoration: none;
+    color: #787878;
+    color: #d1d1d1;
+    font-size: 14px;
+    padding: 0 7px;
+    text-align: center;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a:hover,
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a.aktiv {
+    color: #787878;
+  }
+  body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a > div {
+    min-width: calc((100vw - 152px) / 4);
+    width: calc((100vw - 152px) / 4);
+    max-width: calc((100vw - 152px) / 4);
+    display: inline-block;
+  }
+  body .sidemeny > .nede-venstre > .tekst-innhold {
+    font-size: 0.8em;
+  }
+  body .hoved {
+    padding: 40px 0 80px 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+  }
+  body .hoved .stort_bilde {
+    width: 100%;
+    height: calc(100vh - 3*40px);
+    min-height: 100%;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
 }
 /*# sourceMappingURL=stil.css.map */

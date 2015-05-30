@@ -1,0 +1,17 @@
+.imp-hoveddel(){  
+    .hoved{
+        padding: @padding-rundt-innhold @padding-bilde-hoeyre (2*@padding-rundt-innhold) 0;
+        box-sizing: border-box;
+        vertical-align: top;
+        display: inline-block;
+        width: @hoved-bredde;
+
+        .stort_bilde{
+            width: 100%;
+            height: calc(100vh - 3*@padding-rundt-innhold);
+            min-height: 100%;
+            min-width: 100%;
+            .bakgrunnbilde-innstillinger();
+        }
+    }
+}
