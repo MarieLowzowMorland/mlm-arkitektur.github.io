@@ -20,9 +20,11 @@
 
                     > a{
                         .ustilert();
+                        width: @meny-element-bredde;
                         color: lighten(@tittelfarge, 35%);
                         font-size: 14px;
-                        padding: 0 @meny-element-padding;
+                        padding: 0 (@meny-element-padding + 2px);
+                        box-sizing: border-box;
                         text-align: center;
 
                         &:hover, &.aktiv{
@@ -30,6 +32,8 @@
                         }
 
                         > div {
+                            vertical-align: top;
+                            padding: @meny-element-padding 0;
                             .krev-bredde(@meny-element-bredde);
                             display: inline-block;
                         }
@@ -39,8 +43,26 @@
         }
 
         > .nede-venstre{
-            > .tekst-innhold{
-                font-size: 0.8em;
+            padding: 0 @meny-element-padding;
+            font-size: 0.8em;
+            
+            .ingress{
+                font-size: 1.0em;
+                font-style: italic;
+                margin-top: 10px;
+            
+                .ingress-overskift{
+                    font-weight: bold;
+                }
+            }
+            
+            .undertittel{
+                font-weight: bold;
+            }
+            
+            .sitat{
+                color: rgb(145, 160, 87);
+                font-style: italic;
             }
         }
     }

@@ -15,13 +15,16 @@ hjemmesideApp.controller('ProsjekterCtrl', ['$scope', '$state', '$http', functio
     (function init(){
         var navn, url;
         navn = $state.current.url.split("/");
-        url = "bilder/autogenerert/" + navn[1] + "/" + (navn[2] === undefined ? "" : navn[2] + "/");
+        url = "bilder/autogenerert/" + navn[1] + "/" + (navn[2] === undefined ? "" : navn[2].replace(new RegExp("_", 'g'), " ") + "/");
         
         $http.get("/"+url+"filListe.json").success(function(filListe) {
             $scope.bildeUrl = url;
             $scope.filListe = filListe;
             
             setTimeout(startSlider, 200);
+        }).error(function(){
+            $scope.bildeUrl = "";
+            $scope.filListe = [];
         }); 
     })();
 }]);

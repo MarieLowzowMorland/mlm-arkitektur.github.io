@@ -199,9 +199,11 @@ body {
   body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a {
     text-decoration: none;
     color: #787878;
+    width: calc((500px - 152px) / 4);
     color: #d1d1d1;
     font-size: 14px;
-    padding: 0 7px;
+    padding: 0 9px;
+    box-sizing: border-box;
     text-align: center;
   }
   body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a:hover,
@@ -209,13 +211,31 @@ body {
     color: #787878;
   }
   body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a > div {
+    vertical-align: top;
+    padding: 7px 0;
     min-width: calc((500px - 152px) / 4);
     width: calc((500px - 152px) / 4);
     max-width: calc((500px - 152px) / 4);
     display: inline-block;
   }
-  body .sidemeny > .nede-venstre > .tekst-innhold {
+  body .sidemeny > .nede-venstre {
+    padding: 0 7px;
     font-size: 0.8em;
+  }
+  body .sidemeny > .nede-venstre .ingress {
+    font-size: 1.0em;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  body .sidemeny > .nede-venstre .ingress .ingress-overskift {
+    font-weight: bold;
+  }
+  body .sidemeny > .nede-venstre .undertittel {
+    font-weight: bold;
+  }
+  body .sidemeny > .nede-venstre .sitat {
+    color: #91a057;
+    font-style: italic;
   }
   body .hoved {
     padding: 40px 40px 80px 0;
@@ -389,9 +409,11 @@ body {
   body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a {
     text-decoration: none;
     color: #787878;
+    width: calc((100vw - 114px) / 2);
     color: #d1d1d1;
     font-size: 14px;
-    padding: 0 7px;
+    padding: 0 9px;
+    box-sizing: border-box;
     text-align: center;
   }
   body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a:hover,
@@ -399,13 +421,31 @@ body {
     color: #787878;
   }
   body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a > div {
+    vertical-align: top;
+    padding: 7px 0;
     min-width: calc((100vw - 114px) / 2);
     width: calc((100vw - 114px) / 2);
     max-width: calc((100vw - 114px) / 2);
     display: inline-block;
   }
-  body .sidemeny > .nede-venstre > .tekst-innhold {
+  body .sidemeny > .nede-venstre {
+    padding: 0 7px;
     font-size: 0.8em;
+  }
+  body .sidemeny > .nede-venstre .ingress {
+    font-size: 1.0em;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  body .sidemeny > .nede-venstre .ingress .ingress-overskift {
+    font-weight: bold;
+  }
+  body .sidemeny > .nede-venstre .undertittel {
+    font-weight: bold;
+  }
+  body .sidemeny > .nede-venstre .sitat {
+    color: #91a057;
+    font-style: italic;
   }
   body .hoved {
     padding: 40px 0 80px 0;
@@ -579,9 +619,11 @@ body {
   body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a {
     text-decoration: none;
     color: #787878;
+    width: calc((100vw - 152px) / 4);
     color: #d1d1d1;
     font-size: 14px;
-    padding: 0 7px;
+    padding: 0 9px;
+    box-sizing: border-box;
     text-align: center;
   }
   body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a:hover,
@@ -589,13 +631,31 @@ body {
     color: #787878;
   }
   body .sidemeny > .topp-venstre > .meny-vindu > .undermeny > a > div {
+    vertical-align: top;
+    padding: 7px 0;
     min-width: calc((100vw - 152px) / 4);
     width: calc((100vw - 152px) / 4);
     max-width: calc((100vw - 152px) / 4);
     display: inline-block;
   }
-  body .sidemeny > .nede-venstre > .tekst-innhold {
+  body .sidemeny > .nede-venstre {
+    padding: 0 7px;
     font-size: 0.8em;
+  }
+  body .sidemeny > .nede-venstre .ingress {
+    font-size: 1.0em;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  body .sidemeny > .nede-venstre .ingress .ingress-overskift {
+    font-weight: bold;
+  }
+  body .sidemeny > .nede-venstre .undertittel {
+    font-weight: bold;
+  }
+  body .sidemeny > .nede-venstre .sitat {
+    color: #91a057;
+    font-style: italic;
   }
   body .hoved {
     padding: 40px 0 80px 0;
