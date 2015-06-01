@@ -242,7 +242,7 @@ body {
     box-sizing: border-box;
     vertical-align: top;
     display: inline-block;
-    width: calc(100% - 500px - 5px);
+    width: calc(100% - 500px - 6px);
   }
   body .hoved .stort_bilde {
     width: 100%;
