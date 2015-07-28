@@ -50,6 +50,27 @@
     text-align: right;
 }
 
+.klikkbar{
+    cursor: pointer;
+}
+
+#epost{
+    display: inline-block;
+    height: 16px;
+    width: 150px;
+    .bakgrunnbilde-innstillinger-contain();
+    background-image: url(../bilder/autogenerert/mmg.gif);
+    background-position-x: 5px;
+    
+    &:hover{
+        background-image: url(../bilder/autogenerert/mm.gif);
+    }
+}
+
+.bottom-aligned{
+    vertical-align: bottom;
+}
+
 .ustilert{
     text-decoration: none;
     color: @tittelfarge;

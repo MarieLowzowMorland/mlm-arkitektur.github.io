@@ -6,6 +6,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
         var 
         lenker = { templateUrl: 'templates/oppeVenstre/lenker.html', controller: 'LenkeCtrl' },
         forsidelenker = { templateUrl: 'templates/oppeVenstre/lenker.html', controller: 'forsidelenkerCtrl' },
+        kontaktSide = { templateUrl: 'templates/nedeVenstre/meg/kontakt.html', controller: 'kontaktCtrl' },
         bildeSlider = { templateUrl: 'templates/hoved/bildeSpinner.html', controller: 'ProsjekterCtrl'  };
         $urlRouterProvider.otherwise('/');
         
@@ -36,7 +37,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             url:'/meg/kontakt',
             views: {
               "topp-venstre": lenker,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/meg/kontakt.html' }
+              "nede-venstre": kontaktSide
             }
         })
         .state('filosofi', {

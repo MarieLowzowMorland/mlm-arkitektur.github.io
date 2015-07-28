@@ -30,6 +30,25 @@
 .right-aligned {
   text-align: right;
 }
+.klikkbar {
+  cursor: pointer;
+}
+#epost {
+  display: inline-block;
+  height: 16px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-image: url(../bilder/autogenerert/mmg.gif);
+  background-position-x: 5px;
+}
+#epost:hover {
+  background-image: url(../bilder/autogenerert/mm.gif);
+}
+.bottom-aligned {
+  vertical-align: bottom;
+}
 .ustilert {
   text-decoration: none;
   color: #787878;
