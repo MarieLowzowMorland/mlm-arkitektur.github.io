@@ -6,11 +6,11 @@
         </div>
     </div>
     <div class="meny">
-        <a ui-sref="om"><div id="meg"><div class="skygge" ng-class="{'aktiv': menyvalg === 'meg'}"></div><div class="tekst">Meg</div></div></a>
-        <a ui-sref="Barnehage_naturligvis"><div id="arkitektur"><div class="skygge" ng-class="{'aktiv': menyvalg === 'arkitektur'}"></div><div class="tekst">Arkitektur</div></div></a>
+        <a ui-sref="om"><div id="meg"><div class="skygge" ng-class="{'aktiv': skalHaSkygge('meg'), 'inverted': inverted}"></div><div class="tekst">Meg</div></div></a>
+        <a ui-sref="Barnehage_naturligvis"><div id="arkitektur"><div class="skygge" ng-class="{'aktiv': skalHaSkygge('arkitektur'), 'inverted': inverted}"></div><div class="tekst">Arkitektur</div></div></a>
         <div class="gjemStorSkjerm"></div>
-        <a ui-sref="Foto"><div id="foto"><div class="skygge" ng-class="{'aktiv': menyvalg === 'foto'}"></div><div class="tekst">Foto</div></div></a>
-        <a ui-sref="Streker"><div id="tegning"><div class="skygge" ng-class="{'aktiv': menyvalg === 'streker'}"></div><div class="tekst">Streker</div></div></a>
+        <a ui-sref="Foto"><div id="foto"><div class="skygge" ng-class="{'aktiv': skalHaSkygge('foto'), 'inverted': inverted}"></div><div class="tekst">Foto</div></div></a>
+        <a ui-sref="Streker"><div id="tegning"><div class="skygge" ng-class="{'aktiv': skalHaSkygge('streker'), 'inverted': inverted}"></div><div class="tekst">Streker</div></div></a>
     </div>
     <div class="undermeny" ng-show="menyvalg && undermenyListe[menyvalg] !== undefined">
         <a ng-repeat="valgmulighet in undermenyListe[menyvalg]" ui-sref="{{ valgmulighet.k }}" ng-class="{'aktiv': undermeny === valgmulighet.k}"><div>{{ valgmulighet.v }}</div></a>

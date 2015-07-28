@@ -38,4 +38,8 @@ hjemmesideApp.controller('LenkeCtrl', ['$scope', '$state', function($scope, $sta
             $scope.menyvalg = navn[1];
             $scope.undermeny = navn[2];
         })();
+        
+        $scope.skalHaSkygge = function(menyElementNavn){
+            return menyElementNavn === $scope.menyvalg;
+        };
 }]);

@@ -1,73 +1,63 @@
 .bildeviser(){
-    /* CONTAINER
-       ================================================== */
-
-    div.orbit-wrapper {
-        position: relative; }
-
-    div.orbit {
+    div.bildespinner-wrapper {
         position: relative;
-        overflow: hidden }
+         width: 100%;
+         height: 100vh;
+    }
 
-    div.orbit>img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: none; }
+    div.bildespinner-wrapper > .bildespinner{
+         height: 100%;
+    }
 
-    div.orbit>a {
-        border: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        line-height: 0; 
-        display: none; }
+    div.bildespinner {
+        position: relative;
+        overflow: hidden 
+    }
 
-    .orbit>div {
+    .bildespinner > div {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%; }
+        height: 100%; 
+    }
 
-    /* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
+    /* Start og pause knapp */
 
-
-    /* TIMER
-       ================================================== */
-
-    div.timer {
+    div.klokke {
         width: 40px;
         height: 40px;
+        overflow: hidden;
         position: absolute;
         top: 10px;
         right: 10px;
-        opacity: .2;
+        opacity: .6;
         cursor: pointer;
         z-index: 1001; 
-        background-color: white;
-        border-radius: 50%;
     }
 
     span.pause {
         display: block;
         width: 40px;
         height: 40px;
-        background: url(../bilder/bildeviser/pause-black.png) no-repeat;
-        opacity: 1; }
-
-    span.pause.active {
-        background: url(../bilder/bildeviser/pause-black.png) no-repeat 0 -40px }
-
-    div.timer:hover {
-        opacity: .7
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(../bilder/bildespinner/pause-black.png) no-repeat;
+        z-index: 4;
+        opacity: 0; 
     }
 
-    /* DIRECTIONAL NAV
-       ================================================== */
+    span.pause.active {
+        background: url(../bilder/bildespinner/pause-black.png) no-repeat 0 -40px 
+    }
 
-    div.slider-nav {
-        display: block }
+    div.klokke:hover span.pause,
+    span.pause.active {
+        opacity: 1 
+    }
+
+    /* Navigasjonspiler */
 
     div.slider-nav span {
         width: 78px;
@@ -75,56 +65,56 @@
         text-indent: -9999px;
         position: absolute;
         z-index: 1000;
-        top: 50%;
-        margin-top: -50px;
+        top: calc(50% - 50px);
         cursor: pointer; 
     }
 
     div.slider-nav span.right {
-        background: url(../bilder/bildeviser/right-arrow.png);
+        background: url(../bilder/bildespinner/right-arrow.png);
         right: 0; 
-        border-radius: 50% 0 0 50%;
     }
 
     div.slider-nav span.left {
-        background: url(../bilder/bildeviser/left-arrow.png);
+        background: url(../bilder/bildespinner/left-arrow.png);
         left: 0; 
-        border-radius: 0 50% 50% 0;
     }
 
     div.slider-nav span.right:hover {
-        background: url(../bilder/bildeviser/right-arrow_g.png);
-        right: 0; }
+        background: url(../bilder/bildespinner/right-arrow_g.png);
+    }
 
     div.slider-nav span.left:hover {
-        background: url(../bilder/bildeviser/left-arrow_g.png);
-        left: 0; }
-
-    /* BULLET NAV
-       ================================================== */
-
-    .orbit-bullets-wrapper {
-        margin: auto;
+        background: url(../bilder/bildespinner/left-arrow_g.png);
     }
 
-    .orbit-bullets {
-        text-align: center;
+    /* Navigasjonsknapper */
+
+    .bildespinner-knapper {
+        position: absolute;
+        z-index: 1000;
+        list-style: none;
+        left: 15%;
+        width: 70%;
+        margin-left: -7px;
+        padding: 0; 
     }
 
-    .orbit-bullets span {
-        margin: 0 7px;
-        padding: 4px;
+    .bildespinner-knapper li {
+        float: left;
+        margin-left: 15px;
         cursor: pointer;
-        background: url(../bilder/bildeviser/bullets.jpg) no-repeat 3px 10px;
-        overflow-wrap: break-word;
+        color: #999;
+        text-indent: -9999px;
+        background: url(../bilder/bildespinner/bullets.jpg) no-repeat 4px 0;
+        width: 13px;
+        height: 12px;
+        overflow: hidden; 
     }
 
-    .orbit-bullets span.active {
-        background-position: -9px 10px; 
-    }
-
-    div.orbit-wrapper { 
-         width: 100%;
-         height: 100vh;
+    .bildespinner-knapper li.active {
+        color: #222;
+        background-position: -8px 0; 
+        margin-left: 16px;
+        width: 12px;
     }
 }

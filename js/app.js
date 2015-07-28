@@ -5,6 +5,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
         "use strict";
         var 
         lenker = { templateUrl: 'templates/oppeVenstre/lenker.html', controller: 'LenkeCtrl' },
+        forsidelenker = { templateUrl: 'templates/oppeVenstre/lenker.html', controller: 'forsidelenkerCtrl' },
         bildeSlider = { templateUrl: 'templates/hoved/bildeSpinner.html', controller: 'ProsjekterCtrl'  };
         $urlRouterProvider.otherwise('/');
         
@@ -12,7 +13,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
         .state('home', {
             url:'',
             views: {
-              "topp-venstre": { templateUrl: 'templates/oppeVenstre/lenker.html' },
+              "topp-venstre": forsidelenker,
               "hovedvindu": { templateUrl: 'templates/velkomstbilde.html'}
             }
         })

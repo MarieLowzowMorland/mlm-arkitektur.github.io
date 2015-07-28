@@ -8,9 +8,6 @@
     display: none;
   }
 }
-.hidden{
-    display: none;
-}
 .gjemStorSkjerm {
   min-height: 16px;
   min-width: 16px;
@@ -44,7 +41,7 @@
 }
 .bakgrunnbilde-innstillinger-contain {
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
 }
 body {
@@ -54,15 +51,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   body {
-    /* CONTAINER
-       ================================================== */
-    /* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
-    /* TIMER
-       ================================================== */
-    /* DIRECTIONAL NAV
-       ================================================== */
-    /* BULLET NAV
-       ================================================== */
+    /* Start og pause knapp */
+    /* Navigasjonspiler */
+    /* Navigasjonsknapper */
   }
   body .hoved-meny > a {
     text-decoration: none;
@@ -107,6 +98,16 @@ body {
   body .hoved-meny > a > div > div.skygge:hover,
   body .hoved-meny > a > div > div.skygge.aktiv {
     background-color: transparent;
+  }
+  body .hoved-meny > a > div > div.inverted {
+    background-color: transparent;
+  }
+  body .hoved-meny > a > div > div.inverted:hover,
+  body .hoved-meny > a > div > div.inverted.aktiv {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: calc((500px - 152px) / 4);
+    box-sizing: border-box;
   }
   body .hoved-meny > a > div > div.tekst {
     margin: -18px;
@@ -178,6 +179,16 @@ body {
   body .meny-vindu > .meny > a > div > div.skygge:hover,
   body .meny-vindu > .meny > a > div > div.skygge.aktiv {
     background-color: transparent;
+  }
+  body .meny-vindu > .meny > a > div > div.inverted {
+    background-color: transparent;
+  }
+  body .meny-vindu > .meny > a > div > div.inverted:hover,
+  body .meny-vindu > .meny > a > div > div.inverted.aktiv {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: calc((500px - 152px) / 4);
+    box-sizing: border-box;
   }
   body .meny-vindu > .meny > a > div > div.tekst {
     margin: -18px;
@@ -272,61 +283,53 @@ body {
     background-size: contain;
     background-position: center center;
   }
-  body div.orbit-wrapper {
+  body div.bildespinner-wrapper {
     position: relative;
+    width: 100%;
+    height: 100vh;
   }
-  body div.orbit {
+  body div.bildespinner-wrapper > .bildespinner {
+    height: 100%;
+  }
+  body div.bildespinner {
     position: relative;
     overflow: hidden;
   }
-  body div.orbit > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-  }
-  body div.orbit > a {
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    line-height: 0;
-    display: none;
-  }
-  body .orbit > div {
+  body .bildespinner > div {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
   }
-  body div.timer {
+  body div.klokke {
     width: 40px;
     height: 40px;
+    overflow: hidden;
     position: absolute;
     top: 10px;
     right: 10px;
-    opacity: .2;
+    opacity: .6;
     cursor: pointer;
     z-index: 1001;
-    background-color: white;
-    border-radius: 50%;
   }
   body span.pause {
     display: block;
     width: 40px;
     height: 40px;
-    background: url(../bilder/bildeviser/pause-black.png) no-repeat;
-    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../bilder/bildespinner/pause-black.png) no-repeat;
+    z-index: 4;
+    opacity: 0;
   }
   body span.pause.active {
-    background: url(../bilder/bildeviser/pause-black.png) no-repeat 0 -40px;
+    background: url(../bilder/bildespinner/pause-black.png) no-repeat 0 -40px;
   }
-  body div.timer:hover {
-    opacity: 0.7;
-  }
-  body div.slider-nav {
-    display: block;
+  body div.klokke:hover span.pause,
+  body span.pause.active {
+    opacity: 1;
   }
   body div.slider-nav span {
     width: 78px;
@@ -334,60 +337,55 @@ body {
     text-indent: -9999px;
     position: absolute;
     z-index: 1000;
-    top: 50%;
-    margin-top: -50px;
+    top: calc(50% - 50px);
     cursor: pointer;
   }
   body div.slider-nav span.right {
-    background: url(../bilder/bildeviser/right-arrow.png);
+    background: url(../bilder/bildespinner/right-arrow.png);
     right: 0;
-    border-radius: 50% 0 0 50%;
   }
   body div.slider-nav span.left {
-    background: url(../bilder/bildeviser/left-arrow.png);
+    background: url(../bilder/bildespinner/left-arrow.png);
     left: 0;
-    border-radius: 0 50% 50% 0;
   }
   body div.slider-nav span.right:hover {
-    background: url(../bilder/bildeviser/right-arrow_g.png);
-    right: 0;
+    background: url(../bilder/bildespinner/right-arrow_g.png);
   }
   body div.slider-nav span.left:hover {
-    background: url(../bilder/bildeviser/left-arrow_g.png);
-    left: 0;
+    background: url(../bilder/bildespinner/left-arrow_g.png);
   }
-  body .orbit-bullets-wrapper {
-    margin: auto;
+  body .bildespinner-knapper {
+    position: absolute;
+    z-index: 1000;
+    list-style: none;
+    left: 15%;
+    width: 70%;
+    margin-left: -7px;
+    padding: 0;
   }
-  body .orbit-bullets {
-    text-align: center;
-  }
-  body .orbit-bullets span {
-    margin: 0 7px;
-    padding: 4px;
+  body .bildespinner-knapper li {
+    float: left;
+    margin-left: 15px;
     cursor: pointer;
-    background: url(../bilder/bildeviser/bullets.jpg) no-repeat 3px 10px;
-    overflow-wrap: break-word;
+    color: #999;
+    text-indent: -9999px;
+    background: url(../bilder/bildespinner/bullets.jpg) no-repeat 4px 0;
+    width: 13px;
+    height: 12px;
+    overflow: hidden;
   }
-  body .orbit-bullets span.active {
-    background-position: -9px 10px;
-  }
-  body div.orbit-wrapper {
-    width: 100%;
-    height: 100vh;
+  body .bildespinner-knapper li.active {
+    color: #222;
+    background-position: -8px 0;
+    margin-left: 16px;
+    width: 12px;
   }
 }
 @media screen and (max-width: 500px) {
   body {
-    /* CONTAINER
-       ================================================== */
-    /* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
-    /* TIMER
-       ================================================== */
-    /* DIRECTIONAL NAV
-       ================================================== */
-    /* BULLET NAV
-       ================================================== */
+    /* Start og pause knapp */
+    /* Navigasjonspiler */
+    /* Navigasjonsknapper */
   }
   body .hoved-meny > a {
     text-decoration: none;
@@ -432,6 +430,16 @@ body {
   body .hoved-meny > a > div > div.skygge:hover,
   body .hoved-meny > a > div > div.skygge.aktiv {
     background-color: transparent;
+  }
+  body .hoved-meny > a > div > div.inverted {
+    background-color: transparent;
+  }
+  body .hoved-meny > a > div > div.inverted:hover,
+  body .hoved-meny > a > div > div.inverted.aktiv {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: calc((100vw - 114px) / 2);
+    box-sizing: border-box;
   }
   body .hoved-meny > a > div > div.tekst {
     margin: -18px;
@@ -503,6 +511,16 @@ body {
   body .meny-vindu > .meny > a > div > div.skygge:hover,
   body .meny-vindu > .meny > a > div > div.skygge.aktiv {
     background-color: transparent;
+  }
+  body .meny-vindu > .meny > a > div > div.inverted {
+    background-color: transparent;
+  }
+  body .meny-vindu > .meny > a > div > div.inverted:hover,
+  body .meny-vindu > .meny > a > div > div.inverted.aktiv {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: calc((100vw - 114px) / 2);
+    box-sizing: border-box;
   }
   body .meny-vindu > .meny > a > div > div.tekst {
     margin: -18px;
@@ -597,61 +615,53 @@ body {
     background-size: contain;
     background-position: center center;
   }
-  body div.orbit-wrapper {
+  body div.bildespinner-wrapper {
     position: relative;
+    width: 100%;
+    height: 100vh;
   }
-  body div.orbit {
+  body div.bildespinner-wrapper > .bildespinner {
+    height: 100%;
+  }
+  body div.bildespinner {
     position: relative;
     overflow: hidden;
   }
-  body div.orbit > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-  }
-  body div.orbit > a {
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    line-height: 0;
-    display: none;
-  }
-  body .orbit > div {
+  body .bildespinner > div {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
   }
-  body div.timer {
+  body div.klokke {
     width: 40px;
     height: 40px;
+    overflow: hidden;
     position: absolute;
     top: 10px;
     right: 10px;
-    opacity: .2;
+    opacity: .6;
     cursor: pointer;
     z-index: 1001;
-    background-color: white;
-    border-radius: 50%;
   }
   body span.pause {
     display: block;
     width: 40px;
     height: 40px;
-    background: url(../bilder/bildeviser/pause-black.png) no-repeat;
-    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../bilder/bildespinner/pause-black.png) no-repeat;
+    z-index: 4;
+    opacity: 0;
   }
   body span.pause.active {
-    background: url(../bilder/bildeviser/pause-black.png) no-repeat 0 -40px;
+    background: url(../bilder/bildespinner/pause-black.png) no-repeat 0 -40px;
   }
-  body div.timer:hover {
-    opacity: 0.7;
-  }
-  body div.slider-nav {
-    display: block;
+  body div.klokke:hover span.pause,
+  body span.pause.active {
+    opacity: 1;
   }
   body div.slider-nav span {
     width: 78px;
@@ -659,60 +669,55 @@ body {
     text-indent: -9999px;
     position: absolute;
     z-index: 1000;
-    top: 50%;
-    margin-top: -50px;
+    top: calc(50% - 50px);
     cursor: pointer;
   }
   body div.slider-nav span.right {
-    background: url(../bilder/bildeviser/right-arrow.png);
+    background: url(../bilder/bildespinner/right-arrow.png);
     right: 0;
-    border-radius: 50% 0 0 50%;
   }
   body div.slider-nav span.left {
-    background: url(../bilder/bildeviser/left-arrow.png);
+    background: url(../bilder/bildespinner/left-arrow.png);
     left: 0;
-    border-radius: 0 50% 50% 0;
   }
   body div.slider-nav span.right:hover {
-    background: url(../bilder/bildeviser/right-arrow_g.png);
-    right: 0;
+    background: url(../bilder/bildespinner/right-arrow_g.png);
   }
   body div.slider-nav span.left:hover {
-    background: url(../bilder/bildeviser/left-arrow_g.png);
-    left: 0;
+    background: url(../bilder/bildespinner/left-arrow_g.png);
   }
-  body .orbit-bullets-wrapper {
-    margin: auto;
+  body .bildespinner-knapper {
+    position: absolute;
+    z-index: 1000;
+    list-style: none;
+    left: 15%;
+    width: 70%;
+    margin-left: -7px;
+    padding: 0;
   }
-  body .orbit-bullets {
-    text-align: center;
-  }
-  body .orbit-bullets span {
-    margin: 0 7px;
-    padding: 4px;
+  body .bildespinner-knapper li {
+    float: left;
+    margin-left: 15px;
     cursor: pointer;
-    background: url(../bilder/bildeviser/bullets.jpg) no-repeat 3px 10px;
-    overflow-wrap: break-word;
+    color: #999;
+    text-indent: -9999px;
+    background: url(../bilder/bildespinner/bullets.jpg) no-repeat 4px 0;
+    width: 13px;
+    height: 12px;
+    overflow: hidden;
   }
-  body .orbit-bullets span.active {
-    background-position: -9px 10px;
-  }
-  body div.orbit-wrapper {
-    width: 100%;
-    height: 100vh;
+  body .bildespinner-knapper li.active {
+    color: #222;
+    background-position: -8px 0;
+    margin-left: 16px;
+    width: 12px;
   }
 }
 @media screen and (max-width: 1000px) and (min-width: 500px) {
   body {
-    /* CONTAINER
-       ================================================== */
-    /* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
-    /* TIMER
-       ================================================== */
-    /* DIRECTIONAL NAV
-       ================================================== */
-    /* BULLET NAV
-       ================================================== */
+    /* Start og pause knapp */
+    /* Navigasjonspiler */
+    /* Navigasjonsknapper */
   }
   body .hoved-meny > a {
     text-decoration: none;
@@ -757,6 +762,16 @@ body {
   body .hoved-meny > a > div > div.skygge:hover,
   body .hoved-meny > a > div > div.skygge.aktiv {
     background-color: transparent;
+  }
+  body .hoved-meny > a > div > div.inverted {
+    background-color: transparent;
+  }
+  body .hoved-meny > a > div > div.inverted:hover,
+  body .hoved-meny > a > div > div.inverted.aktiv {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: calc((100vw - 152px) / 4);
+    box-sizing: border-box;
   }
   body .hoved-meny > a > div > div.tekst {
     margin: -18px;
@@ -828,6 +843,16 @@ body {
   body .meny-vindu > .meny > a > div > div.skygge:hover,
   body .meny-vindu > .meny > a > div > div.skygge.aktiv {
     background-color: transparent;
+  }
+  body .meny-vindu > .meny > a > div > div.inverted {
+    background-color: transparent;
+  }
+  body .meny-vindu > .meny > a > div > div.inverted:hover,
+  body .meny-vindu > .meny > a > div > div.inverted.aktiv {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: calc((100vw - 152px) / 4);
+    box-sizing: border-box;
   }
   body .meny-vindu > .meny > a > div > div.tekst {
     margin: -18px;
@@ -922,61 +947,53 @@ body {
     background-size: contain;
     background-position: center center;
   }
-  body div.orbit-wrapper {
+  body div.bildespinner-wrapper {
     position: relative;
+    width: 100%;
+    height: 100vh;
   }
-  body div.orbit {
+  body div.bildespinner-wrapper > .bildespinner {
+    height: 100%;
+  }
+  body div.bildespinner {
     position: relative;
     overflow: hidden;
   }
-  body div.orbit > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-  }
-  body div.orbit > a {
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    line-height: 0;
-    display: none;
-  }
-  body .orbit > div {
+  body .bildespinner > div {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
   }
-  body div.timer {
+  body div.klokke {
     width: 40px;
     height: 40px;
+    overflow: hidden;
     position: absolute;
     top: 10px;
     right: 10px;
-    opacity: .2;
+    opacity: .6;
     cursor: pointer;
     z-index: 1001;
-    background-color: white;
-    border-radius: 50%;
   }
   body span.pause {
     display: block;
     width: 40px;
     height: 40px;
-    background: url(../bilder/bildeviser/pause-black.png) no-repeat;
-    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../bilder/bildespinner/pause-black.png) no-repeat;
+    z-index: 4;
+    opacity: 0;
   }
   body span.pause.active {
-    background: url(../bilder/bildeviser/pause-black.png) no-repeat 0 -40px;
+    background: url(../bilder/bildespinner/pause-black.png) no-repeat 0 -40px;
   }
-  body div.timer:hover {
-    opacity: 0.7;
-  }
-  body div.slider-nav {
-    display: block;
+  body div.klokke:hover span.pause,
+  body span.pause.active {
+    opacity: 1;
   }
   body div.slider-nav span {
     width: 78px;
@@ -984,47 +1001,48 @@ body {
     text-indent: -9999px;
     position: absolute;
     z-index: 1000;
-    top: 50%;
-    margin-top: -50px;
+    top: calc(50% - 50px);
     cursor: pointer;
   }
   body div.slider-nav span.right {
-    background: url(../bilder/bildeviser/right-arrow.png);
+    background: url(../bilder/bildespinner/right-arrow.png);
     right: 0;
-    border-radius: 50% 0 0 50%;
   }
   body div.slider-nav span.left {
-    background: url(../bilder/bildeviser/left-arrow.png);
+    background: url(../bilder/bildespinner/left-arrow.png);
     left: 0;
-    border-radius: 0 50% 50% 0;
   }
   body div.slider-nav span.right:hover {
-    background: url(../bilder/bildeviser/right-arrow_g.png);
-    right: 0;
+    background: url(../bilder/bildespinner/right-arrow_g.png);
   }
   body div.slider-nav span.left:hover {
-    background: url(../bilder/bildeviser/left-arrow_g.png);
-    left: 0;
+    background: url(../bilder/bildespinner/left-arrow_g.png);
   }
-  body .orbit-bullets-wrapper {
-    margin: auto;
+  body .bildespinner-knapper {
+    position: absolute;
+    z-index: 1000;
+    list-style: none;
+    left: 15%;
+    width: 70%;
+    margin-left: -7px;
+    padding: 0;
   }
-  body .orbit-bullets {
-    text-align: center;
-  }
-  body .orbit-bullets span {
-    margin: 0 7px;
-    padding: 4px;
+  body .bildespinner-knapper li {
+    float: left;
+    margin-left: 15px;
     cursor: pointer;
-    background: url(../bilder/bildeviser/bullets.jpg) no-repeat 3px 10px;
-    overflow-wrap: break-word;
+    color: #999;
+    text-indent: -9999px;
+    background: url(../bilder/bildespinner/bullets.jpg) no-repeat 4px 0;
+    width: 13px;
+    height: 12px;
+    overflow: hidden;
   }
-  body .orbit-bullets span.active {
-    background-position: -9px 10px;
-  }
-  body div.orbit-wrapper {
-    width: 100%;
-    height: 100vh;
+  body .bildespinner-knapper li.active {
+    color: #222;
+    background-position: -8px 0;
+    margin-left: 16px;
+    width: 12px;
   }
 }
 /*# sourceMappingURL=stil.css.map */
