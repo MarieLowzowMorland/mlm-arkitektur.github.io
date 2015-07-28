@@ -1,16 +1,5 @@
-hjemmesideApp.controller('ProsjekterCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
+hjemmesideApp.controller('ProsjekterCtrl', ['$scope', '$state', '$http', '$timeout', function($scope, $state, $http, $timeout) {
     "use strict";
-    
-    function startSlider(){
-        $('#bildeviser').orbit({
-            animation: 'fade',
-            animationSpeed: 1000,
-            timer: true,
-            advanceSpeed: 10000,
-            directionalNav: true,
-            bullets: true
-        });
-    }
         
     (function init(){
         var navn, url;
@@ -18,12 +7,12 @@ hjemmesideApp.controller('ProsjekterCtrl', ['$scope', '$state', '$http', functio
         url = "bilder/autogenerert/" + navn[1] + "/" + (navn[2] === undefined ? "" : navn[2].replace(new RegExp("_", 'g'), " ") + "/");
         
         $http.get("/"+url+"filListe.json").success(function(filListe) {
-            $scope.bildeUrl = url;
             $scope.filListe = filListe;
             
-            setTimeout(startSlider, 200);
+            $timeout(function(){
+                $('#bildeviser').bildespinner(url, filListe);
+            });
         }).error(function(){
-            $scope.bildeUrl = "";
             $scope.filListe = [];
         }); 
     })();

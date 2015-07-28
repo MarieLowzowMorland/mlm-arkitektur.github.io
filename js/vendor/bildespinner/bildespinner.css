@@ -1,0 +1,118 @@
+div.bildespinner-wrapper {
+    position: relative;
+     width: 100%;
+     height: 100vh;
+}
+
+div.bildespinner-wrapper > .bildespinner{
+     height: 100%;
+}
+
+div.bildespinner {
+    position: relative;
+    overflow: hidden 
+}
+
+.bildespinner > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+/* Start og pause knapp */
+
+div.klokke {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: .6;
+    cursor: pointer;
+    z-index: 1001; 
+}
+
+span.pause {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(bildespinner/pause-black.png) no-repeat;
+    z-index: 4;
+    opacity: 0; 
+}
+
+span.pause.active {
+    background: url(bildespinner/pause-black.png) no-repeat 0 -40px 
+}
+
+div.klokke:hover span.pause,
+span.pause.active {
+    opacity: 1 
+}
+
+/* Navigasjonspiler */
+
+div.slider-nav span {
+    width: 78px;
+    height: 100px;
+    text-indent: -9999px;
+    position: absolute;
+    z-index: 1000;
+    top: calc(50% - 50px);
+    cursor: pointer; 
+}
+
+div.slider-nav span.right {
+    background: url(bildespinner/right-arrow.png);
+    right: 0; 
+}
+
+div.slider-nav span.left {
+    background: url(bildespinner/left-arrow.png);
+    left: 0; 
+}
+
+div.slider-nav span.right:hover {
+    background: url(bildespinner/right-arrow_g.png);
+}
+
+div.slider-nav span.left:hover {
+    background: url(bildespinner/left-arrow_g.png);
+}
+
+/* Navigasjonsknapper */
+
+.bildespinner-knapper {
+    position: absolute;
+    z-index: 1000;
+    list-style: none;
+    left: 15%;
+    width: 70%;
+    margin-left: -7px;
+    padding: 0; 
+}
+
+.bildespinner-knapper li {
+    float: left;
+    margin-left: 15px;
+    cursor: pointer;
+    color: #999;
+    text-indent: -9999px;
+    background: url(bildespinner/bullets.jpg) no-repeat 4px 0;
+    width: 13px;
+    height: 12px;
+    overflow: hidden; 
+}
+
+.bildespinner-knapper li.active {
+    color: #222;
+    background-position: -8px 0; 
+    margin-left: 16px;
+    width: 12px;
+}
