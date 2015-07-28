@@ -42,12 +42,28 @@
   background-size: cover;
   background-position: center center;
 }
+.bakgrunnbilde-innstillinger-contain {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
 body {
   font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   color: #969696;
   margin: 0;
 }
 @media screen and (min-width: 768px) {
+  body {
+    /* CONTAINER
+       ================================================== */
+    /* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
+    /* TIMER
+       ================================================== */
+    /* DIRECTIONAL NAV
+       ================================================== */
+    /* BULLET NAV
+       ================================================== */
+  }
   body .hoved-meny > a {
     text-decoration: none;
     color: #787878;
@@ -256,8 +272,123 @@ body {
     background-size: contain;
     background-position: center center;
   }
+  body div.orbit-wrapper {
+    position: relative;
+  }
+  body div.orbit {
+    position: relative;
+    overflow: hidden;
+  }
+  body div.orbit > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  body div.orbit > a {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 0;
+    display: none;
+  }
+  body .orbit > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  body div.timer {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: .2;
+    cursor: pointer;
+    z-index: 1001;
+    background-color: white;
+    border-radius: 50%;
+  }
+  body span.pause {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../bilder/bildeviser/pause-black.png) no-repeat;
+    opacity: 1;
+  }
+  body span.pause.active {
+    background: url(../bilder/bildeviser/pause-black.png) no-repeat 0 -40px;
+  }
+  body div.timer:hover {
+    opacity: 0.7;
+  }
+  body div.slider-nav {
+    display: block;
+  }
+  body div.slider-nav span {
+    width: 78px;
+    height: 100px;
+    text-indent: -9999px;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    margin-top: -50px;
+    cursor: pointer;
+  }
+  body div.slider-nav span.right {
+    background: url(../bilder/bildeviser/right-arrow.png);
+    right: 0;
+    border-radius: 50% 0 0 50%;
+  }
+  body div.slider-nav span.left {
+    background: url(../bilder/bildeviser/left-arrow.png);
+    left: 0;
+    border-radius: 0 50% 50% 0;
+  }
+  body div.slider-nav span.right:hover {
+    background: url(../bilder/bildeviser/right-arrow_g.png);
+    right: 0;
+  }
+  body div.slider-nav span.left:hover {
+    background: url(../bilder/bildeviser/left-arrow_g.png);
+    left: 0;
+  }
+  body .orbit-bullets-wrapper {
+    margin: auto;
+  }
+  body .orbit-bullets {
+    text-align: center;
+  }
+  body .orbit-bullets span {
+    margin: 0 7px;
+    padding: 4px;
+    cursor: pointer;
+    background: url(../bilder/bildeviser/bullets.jpg) no-repeat 3px 10px;
+    overflow-wrap: break-word;
+  }
+  body .orbit-bullets span.active {
+    background-position: -9px 10px;
+  }
+  body div.orbit-wrapper {
+    width: 100%;
+    height: 100vh;
+  }
 }
 @media screen and (max-width: 500px) {
+  body {
+    /* CONTAINER
+       ================================================== */
+    /* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
+    /* TIMER
+       ================================================== */
+    /* DIRECTIONAL NAV
+       ================================================== */
+    /* BULLET NAV
+       ================================================== */
+  }
   body .hoved-meny > a {
     text-decoration: none;
     color: #787878;
@@ -466,8 +597,123 @@ body {
     background-size: contain;
     background-position: center center;
   }
+  body div.orbit-wrapper {
+    position: relative;
+  }
+  body div.orbit {
+    position: relative;
+    overflow: hidden;
+  }
+  body div.orbit > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  body div.orbit > a {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 0;
+    display: none;
+  }
+  body .orbit > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  body div.timer {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: .2;
+    cursor: pointer;
+    z-index: 1001;
+    background-color: white;
+    border-radius: 50%;
+  }
+  body span.pause {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../bilder/bildeviser/pause-black.png) no-repeat;
+    opacity: 1;
+  }
+  body span.pause.active {
+    background: url(../bilder/bildeviser/pause-black.png) no-repeat 0 -40px;
+  }
+  body div.timer:hover {
+    opacity: 0.7;
+  }
+  body div.slider-nav {
+    display: block;
+  }
+  body div.slider-nav span {
+    width: 78px;
+    height: 100px;
+    text-indent: -9999px;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    margin-top: -50px;
+    cursor: pointer;
+  }
+  body div.slider-nav span.right {
+    background: url(../bilder/bildeviser/right-arrow.png);
+    right: 0;
+    border-radius: 50% 0 0 50%;
+  }
+  body div.slider-nav span.left {
+    background: url(../bilder/bildeviser/left-arrow.png);
+    left: 0;
+    border-radius: 0 50% 50% 0;
+  }
+  body div.slider-nav span.right:hover {
+    background: url(../bilder/bildeviser/right-arrow_g.png);
+    right: 0;
+  }
+  body div.slider-nav span.left:hover {
+    background: url(../bilder/bildeviser/left-arrow_g.png);
+    left: 0;
+  }
+  body .orbit-bullets-wrapper {
+    margin: auto;
+  }
+  body .orbit-bullets {
+    text-align: center;
+  }
+  body .orbit-bullets span {
+    margin: 0 7px;
+    padding: 4px;
+    cursor: pointer;
+    background: url(../bilder/bildeviser/bullets.jpg) no-repeat 3px 10px;
+    overflow-wrap: break-word;
+  }
+  body .orbit-bullets span.active {
+    background-position: -9px 10px;
+  }
+  body div.orbit-wrapper {
+    width: 100%;
+    height: 100vh;
+  }
 }
 @media screen and (max-width: 1000px) and (min-width: 500px) {
+  body {
+    /* CONTAINER
+       ================================================== */
+    /* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
+    /* TIMER
+       ================================================== */
+    /* DIRECTIONAL NAV
+       ================================================== */
+    /* BULLET NAV
+       ================================================== */
+  }
   body .hoved-meny > a {
     text-decoration: none;
     color: #787878;
@@ -675,6 +921,110 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+  }
+  body div.orbit-wrapper {
+    position: relative;
+  }
+  body div.orbit {
+    position: relative;
+    overflow: hidden;
+  }
+  body div.orbit > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  body div.orbit > a {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 0;
+    display: none;
+  }
+  body .orbit > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  body div.timer {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: .2;
+    cursor: pointer;
+    z-index: 1001;
+    background-color: white;
+    border-radius: 50%;
+  }
+  body span.pause {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../bilder/bildeviser/pause-black.png) no-repeat;
+    opacity: 1;
+  }
+  body span.pause.active {
+    background: url(../bilder/bildeviser/pause-black.png) no-repeat 0 -40px;
+  }
+  body div.timer:hover {
+    opacity: 0.7;
+  }
+  body div.slider-nav {
+    display: block;
+  }
+  body div.slider-nav span {
+    width: 78px;
+    height: 100px;
+    text-indent: -9999px;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    margin-top: -50px;
+    cursor: pointer;
+  }
+  body div.slider-nav span.right {
+    background: url(../bilder/bildeviser/right-arrow.png);
+    right: 0;
+    border-radius: 50% 0 0 50%;
+  }
+  body div.slider-nav span.left {
+    background: url(../bilder/bildeviser/left-arrow.png);
+    left: 0;
+    border-radius: 0 50% 50% 0;
+  }
+  body div.slider-nav span.right:hover {
+    background: url(../bilder/bildeviser/right-arrow_g.png);
+    right: 0;
+  }
+  body div.slider-nav span.left:hover {
+    background: url(../bilder/bildeviser/left-arrow_g.png);
+    left: 0;
+  }
+  body .orbit-bullets-wrapper {
+    margin: auto;
+  }
+  body .orbit-bullets {
+    text-align: center;
+  }
+  body .orbit-bullets span {
+    margin: 0 7px;
+    padding: 4px;
+    cursor: pointer;
+    background: url(../bilder/bildeviser/bullets.jpg) no-repeat 3px 10px;
+    overflow-wrap: break-word;
+  }
+  body .orbit-bullets span.active {
+    background-position: -9px 10px;
+  }
+  body div.orbit-wrapper {
+    width: 100%;
+    height: 100vh;
   }
 }
 /*# sourceMappingURL=stil.css.map */
