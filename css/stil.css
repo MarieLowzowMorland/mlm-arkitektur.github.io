@@ -121,7 +121,6 @@ body {
   body .hoved-meny > a > div > div.inverted {
     background-color: transparent;
   }
-  body .hoved-meny > a > div > div.inverted:hover,
   body .hoved-meny > a > div > div.inverted.aktiv {
     position: relative;
     background-color: rgba(255, 255, 255, 0.5);
@@ -202,7 +201,6 @@ body {
   body .meny-vindu > .meny > a > div > div.inverted {
     background-color: transparent;
   }
-  body .meny-vindu > .meny > a > div > div.inverted:hover,
   body .meny-vindu > .meny > a > div > div.inverted.aktiv {
     position: relative;
     background-color: rgba(255, 255, 255, 0.5);
@@ -453,7 +451,6 @@ body {
   body .hoved-meny > a > div > div.inverted {
     background-color: transparent;
   }
-  body .hoved-meny > a > div > div.inverted:hover,
   body .hoved-meny > a > div > div.inverted.aktiv {
     position: relative;
     background-color: rgba(255, 255, 255, 0.5);
@@ -534,7 +531,6 @@ body {
   body .meny-vindu > .meny > a > div > div.inverted {
     background-color: transparent;
   }
-  body .meny-vindu > .meny > a > div > div.inverted:hover,
   body .meny-vindu > .meny > a > div > div.inverted.aktiv {
     position: relative;
     background-color: rgba(255, 255, 255, 0.5);
@@ -785,7 +781,6 @@ body {
   body .hoved-meny > a > div > div.inverted {
     background-color: transparent;
   }
-  body .hoved-meny > a > div > div.inverted:hover,
   body .hoved-meny > a > div > div.inverted.aktiv {
     position: relative;
     background-color: rgba(255, 255, 255, 0.5);
@@ -866,7 +861,6 @@ body {
   body .meny-vindu > .meny > a > div > div.inverted {
     background-color: transparent;
   }
-  body .meny-vindu > .meny > a > div > div.inverted:hover,
   body .meny-vindu > .meny > a > div > div.inverted.aktiv {
     position: relative;
     background-color: rgba(255, 255, 255, 0.5);

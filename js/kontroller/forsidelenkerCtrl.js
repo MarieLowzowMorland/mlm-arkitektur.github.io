@@ -3,7 +3,11 @@ hjemmesideApp.controller('forsidelenkerCtrl', ['$scope', function($scope) {
         
         $scope.inverted = true;
         
-        $scope.skalHaSkygge = function(){
-            return false;
-        };
+        $scope.$on('$viewContentLoaded', function(event) {
+            $(".skygge").hover(function() {
+                $(this).parent().parent().siblings("a").children().children(".skygge").addClass("aktiv");
+            }, function() {
+                $(this).parent().parent().siblings("a").children().children(".skygge").removeClass("aktiv");
+            });
+        });
 }]);
