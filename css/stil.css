@@ -248,7 +248,7 @@ body {
     color: #787878;
     width: calc((500px - 152px) / 4);
     color: #d1d1d1;
-    font-size: 14px;
+    font-size: 11px;
     padding: 0 9px;
     box-sizing: border-box;
     text-align: center;
@@ -267,7 +267,7 @@ body {
   }
   body .sidemeny > .nede-venstre {
     padding: 0 7px;
-    font-size: 0.8em;
+    font-size: 12px;
   }
   body .sidemeny > .nede-venstre .ingress {
     font-size: 1.0em;
@@ -578,7 +578,7 @@ body {
     color: #787878;
     width: calc((100vw - 114px) / 2);
     color: #d1d1d1;
-    font-size: 14px;
+    font-size: 11px;
     padding: 0 9px;
     box-sizing: border-box;
     text-align: center;
@@ -597,7 +597,7 @@ body {
   }
   body .sidemeny > .nede-venstre {
     padding: 0 7px;
-    font-size: 0.8em;
+    font-size: 12px;
   }
   body .sidemeny > .nede-venstre .ingress {
     font-size: 1.0em;
@@ -908,7 +908,7 @@ body {
     color: #787878;
     width: calc((100vw - 152px) / 4);
     color: #d1d1d1;
-    font-size: 14px;
+    font-size: 11px;
     padding: 0 9px;
     box-sizing: border-box;
     text-align: center;
@@ -927,7 +927,7 @@ body {
   }
   body .sidemeny > .nede-venstre {
     padding: 0 7px;
-    font-size: 0.8em;
+    font-size: 12px;
   }
   body .sidemeny > .nede-venstre .ingress {
     font-size: 1.0em;
