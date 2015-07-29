@@ -11,6 +11,12 @@
     max-width: @bredde;
 }
 
+.columns(@bredde, @antall){
+    -webkit-columns: @bredde @antall;
+    -moz-columns: @bredde @antall;
+    columns: @bredde @antall;
+}
+
 @media screen {
     @media (max-width: 768px) {
         .velkomstbilde{
@@ -86,4 +92,8 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center center;
+}
+
+.mellomrom{
+    min-height: 10px;
 }

@@ -7,38 +7,59 @@
 @tittelfarge: rgb(120, 120, 120);
 @sidefarge: rgb(150, 150, 150);
 @padding-rundt-innhold: 40px;
+@logo-hoyde: 65px;
 @meny-element-padding: 7px;
+@kolonne-bredde: 250px;
+
+.defaults(){
+    @sidemeny-bredde: 500px;
+    @tekstvisnings-bredde: calc(100vw - @sidemeny-bredde - 150px);
+    @meny-element-bredde: calc((@sidemeny-bredde - 152px) / 4);
+    @meny-height: auto;
+    @hoved-bredde: calc(100% - @sidemeny-bredde - 6px);
+    @padding-bilde-hoeyre: @padding-rundt-innhold;
+}
 
 .responsive(@rules){
     @media screen {
-        @media (min-width: 768px) {
-            @sidemeny-bredde: 500px;
-            @meny-element-bredde: calc((@sidemeny-bredde - 152px) / 4);
-            @meny-height: auto;
-            @hoved-bredde: calc(100% - @sidemeny-bredde - 6px);
-            @padding-bilde-hoeyre: @padding-rundt-innhold;
-
+        @media (min-width: 1400px) {
+            .defaults();
+            @antall-kolonner: 3;
+            .tekst-innhold-over-bilde();
             @rules();
+        }
+
+        @media (max-width: 1400px){
+            @media (min-width: 1100px){
+                .defaults();
+                @antall-kolonner: 2;
+                .tekst-innhold-over-bilde();
+                @rules();
+            }
         }
 
         @media (max-width: 500px) {
             @sidemeny-bredde: 100vw;
+            @tekstvisnings-bredde: 100vw;
             @meny-element-bredde: calc((@sidemeny-bredde - 114px) / 2);
             @meny-height: 300px;
             @hoved-bredde: 100%;
             @padding-bilde-hoeyre: 0;
-            
+            @antall-kolonner: 1;
+            .tekst-innhold-kollaps();
             @rules();
         }
 
-        @media (max-width: 1000px){
+        @media (max-width: 1100px){
             @media (min-width: 500px){
                 @sidemeny-bredde: 100vw;
+                @tekstvisnings-bredde: 100vw;
                 @meny-element-bredde: calc((@sidemeny-bredde - 152px) / 4);
                 @meny-height: 300px;
                 @hoved-bredde: 100%;
                 @padding-bilde-hoeyre: 0;
-
+                @antall-kolonner: 2;
+                .tekst-innhold-kollaps();
                 @rules();
             }
         }

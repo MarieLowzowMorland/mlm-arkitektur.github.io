@@ -7,14 +7,16 @@
     </p>
     <p>Veileder: Eileen G. Johnsen og Kine Angelo</p>
 </div>
-<div class="tekst-innhold">
-    <p>
+
+<div id="vis-tekst-innhold" ng-click="lesMer()" ng-class="{'tekst-vises': visTekst}">Les mer >></div>
+<div ng-class="{'visTekst': visTekst}" id="tekst-innhold">
+    <img alt="lukk" width="15px;" ng-click="lukk()" src="bilder/Kryss.gif"/>
+    <div class="columns">
         I forbindelse med barnehage-prosjektet ved Ladestien hadde vi en uke 
         med oppgave om å lage et møbel eller en romlig situasjon  
         som er laget for barn inspirert fra egen barndom. 
-    </p>
-    
-    <p>
+        <div class="mellomrom"></div>
+        
         Da jeg var liten, likte jeg å lage hytte av en skummadrass som jeg 
         bøyde og satte i spenn mellom to bord eller stoler slik at den dannet en bue. 
         Inspirert av denne madrassen har jeg laget en hyttebyggemadrass som 
@@ -23,7 +25,9 @@
         med ulik tekstur og farger. Jeg så på muligheten for å fargesette ulike 
         sider av madrassen med en mørk og en lys side, ulike farger  og 
         muligheten for a skape nye farger ved fargerefleksjon ned på bakken. 
-    </p>
-    
-
+    </div>
+    <div id="skjul-tekst-innhold" ng-click="lukk()" ng-class="{'tekst-vises': visTekst}">
+        <div class="mellomrom"></div>
+        << Skjul
+    </div>
 </div>

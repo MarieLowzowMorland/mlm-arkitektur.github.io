@@ -8,8 +8,10 @@
     </p>
     <p>Prosjektleder: Odd Egil Moen</p>
 </div>
-<div class="tekst-innhold">
-    <p>
+<div id="vis-tekst-innhold" ng-click="lesMer()" ng-class="{'tekst-vises': visTekst}">Les mer >></div>
+<div ng-class="{'visTekst': visTekst}" id="tekst-innhold">
+    <img alt="lukk" width="15px;" ng-click="lukk()" src="bilder/Kryss.gif"/>
+    <div class="columns">
         Johanneskirken er en ny stavkirke som skal være en del av et pilegrimssenter 
         langs østerdalsleden. Jeg fikk være med å sette sammen store deler av kirken. 
         Fra å støpe fundamentet til å lage takstoler. Sigmund Bø har satt i gang prosjektet. 
@@ -19,21 +21,20 @@
         isolasjonen ettersom det ble bestemt at kirken skulle isoleres etter 
         at flere av delene var laget. Utfordringen ble å finne ut hvordan vi 
         kunne isolere samtidig som mest mulig av konstruksjonen ble synelig.
-    </p>
-    
-    <p>
+        <div class="mellomrom"></div>
+        
         På byggeplassen fikk jeg drive vanlig tømrerarbeid, bygge limtrebjelker, 
         jobbe med tredybler, rollen som krandirigent, HMS-pådriver.
-    </p>
-    
-    <p>
+        <div class="mellomrom"></div>
+        
         I de periodene hvor det var mindre å gjøre på kirken, f.eks når vi måtte 
         vente på at fundamentet skulle stivne, jobbet vi med et boligbygg tegnet 
         av arkitekt Einar Dahle. Boligen er kombinert med en kafé som skal kunne 
         ta imot pilgrimmene. Der fikk vi isolert, satt inn vinduer og takpapp, 
         og bygget de siste veggene slik at bygget ble tett for vinteren. 
         Da kunne hele høsten benyttes for å gjøre det samme med kirken. 
-    </p>
-    
-
+    <div id="skjul-tekst-innhold" ng-click="lukk()" ng-class="{'tekst-vises': visTekst}">
+        <div class="mellomrom"></div>
+        << Skjul
+    </div>
 </div>

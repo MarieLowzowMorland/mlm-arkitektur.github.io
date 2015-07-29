@@ -7,38 +7,41 @@
         forme steder og ikke bare bygg, og skape bærekraftig arkitektur.
     </p>
 </div>
-<div class="tekst-innhold">
-    <div class="undertittel">Arkitektur = opplevelser</div>
-    <p>
-        Arkitektur er for meg å gi mennesker gode romlige opplevelser, 
-        og legge til rette for at mennesker skal kunne fungere best 
-        mulig i sine omgivelser. Som arkitekt setter jeg menneskets 
-        opplevelse av rom først. I prosjekteringen min streber jeg 
-        etter å gi brukerne både opplevelser av funksjonelle kvaliteter, 
-        samtidig som jeg ønsker å spille på alle sansene ved bruk av ulike 
-        materialer og ved god formgiving. 
-    </p>
-    
-    <div class="undertittel">Jeg vil forme steder, ikke bare bygg</div>
-    <p>
-        Prosjekteringen handler ikke bare om et bygg som skal tegnes, 
-        men også konteksten bygget bygges i. Ved å se på samspillet mellom 
-        bygningen og landskapet kan man forme et helt sted og ikke bare et bygg. 
-        Det er en arkitekts ansvar å skape og ivareta kvaliteter 
-        mellom husene så vell som i dem. 
-    </p>
-    
-    <div class="undertittel">Bærekraftig arkitektur</div>
-    <p>
-        Det meste av fremtidens bygninger er allerede bygget. 
-        Med bærekraft i tankene kan vi ikke ha et bruk- og riv-forbruk 
-        av byggene våre. Av det som bygges nytt, 
-        må man tenke bærekraftige løsninger i utformingen. 
-        Jeg ønsker å lage prosjekter med varige løsninger, 
-        tilpasset lokalt klima og med et arkitektonisk uttrykk som kan 
-        leve mye lengre enn skiftende trender. Jeg ønsker å forme bygg 
-        med en robust fleksibilitet som kan møte fremtidens nye behov og krav til bygget.
-    </p>
-    
 
+<div id="vis-tekst-innhold" ng-click="lesMer()" ng-class="{'tekst-vises': visTekst}">Les mer >></div>
+<div ng-class="{'visTekst': visTekst}" id="tekst-innhold">
+    <img alt="lukk" width="15px;" ng-click="lukk()" src="bilder/Kryss.gif"/>
+    <div class="columns">
+        <div class="undertittel">Arkitektur = opplevelser</div>
+            Arkitektur er for meg å gi mennesker gode romlige opplevelser, 
+            og legge til rette for at mennesker skal kunne fungere best 
+            mulig i sine omgivelser. Som arkitekt setter jeg menneskets 
+            opplevelse av rom først. I prosjekteringen min streber jeg 
+            etter å gi brukerne både opplevelser av funksjonelle kvaliteter, 
+            samtidig som jeg ønsker å spille på alle sansene ved bruk av ulike 
+            materialer og ved god formgiving. 
+            <div class="mellomrom"></div>
+
+        <div class="undertittel">Jeg vil forme steder, ikke bare bygg</div>
+            Prosjekteringen handler ikke bare om et bygg som skal tegnes, 
+            men også konteksten bygget bygges i. Ved å se på samspillet mellom 
+            bygningen og landskapet kan man forme et helt sted og ikke bare et bygg. 
+            Det er en arkitekts ansvar å skape og ivareta kvaliteter 
+            mellom husene så vell som i dem. 
+            <div class="mellomrom"></div>
+
+        <div class="undertittel">Bærekraftig arkitektur</div>
+            Det meste av fremtidens bygninger er allerede bygget. 
+            Med bærekraft i tankene kan vi ikke ha et bruk- og riv-forbruk 
+            av byggene våre. Av det som bygges nytt, 
+            må man tenke bærekraftige løsninger i utformingen. 
+            Jeg ønsker å lage prosjekter med varige løsninger, 
+            tilpasset lokalt klima og med et arkitektonisk uttrykk som kan 
+            leve mye lengre enn skiftende trender. Jeg ønsker å forme bygg 
+            med en robust fleksibilitet som kan møte fremtidens nye behov og krav til bygget.
+    </div>
+    <div id="skjul-tekst-innhold" ng-click="lukk()" ng-class="{'tekst-vises': visTekst}">
+        <div class="mellomrom"></div>
+        << Skjul
+    </div>
 </div>

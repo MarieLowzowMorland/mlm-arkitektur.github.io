@@ -18,8 +18,11 @@
     </p>
     <p>Veileder: Trond Eide og Dag Nilsen</p>
 </div>
-<div class="tekst-innhold">
-    <p>
+
+<div id="vis-tekst-innhold" ng-click="lesMer()" ng-class="{'tekst-vises': visTekst}">Les mer >></div>
+<div ng-class="{'visTekst': visTekst}" id="tekst-innhold">
+    <img alt="lukk" width="15px;" ng-click="lukk()" src="bilder/Kryss.gif"/>
+    <div class="columns">
         Trondheim trenger et litteraturhus, men som en del av debatten ønsket 
         jeg å se på om litteraturhuset kunne få plass i Huitfeldsbryggen i 
         stedet for Huitfeldspalasset på andre siden av gaten. 
@@ -29,9 +32,8 @@
         opp bryggen og laget både en tilstandsrapport og verdivurdering av 
         ulike deler av bygget. Etterpå ble informasjonen vi samlet inn 
         brukt i utformingen av litteraturhuset. 
-    </p>
-    
-    <p>
+        <div class="mellomrom"></div>
+        
         Ved hjelp av konstruksjon, materialer og farger viste jeg hva som var 
         nytt og hva som var autentisk.  Målet var å gjøre byggets historie lesbart, 
         og at man skulle kunne forstå hvordan det hadde sett ut før 
@@ -39,7 +41,9 @@
         for historisk tilgjengelighet.  På sommeren var jeg med å lage en 
         bryggeutstilling nede i byen for å skape oppmerksomhet rundt de store 
         lokalene som står tomme i bryggerekken midt i Trondheim sentrum.
-    </p>
-    
-
+    </div>
+    <div id="skjul-tekst-innhold" ng-click="lukk()" ng-class="{'tekst-vises': visTekst}">
+        <div class="mellomrom"></div>
+        << Skjul
+    </div>
 </div>

@@ -8,6 +8,11 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
         forsidelenker = { templateUrl: 'templates/oppeVenstre/lenker.html', controller: 'forsidelenkerCtrl' },
         kontaktSide = { templateUrl: 'templates/nedeVenstre/meg/kontakt.html', controller: 'kontaktCtrl' },
         bildeSlider = { templateUrl: 'templates/hoved/bildeSpinner.html', controller: 'ProsjekterCtrl'  };
+
+        function tekst(templateUrl){
+            return { templateUrl: templateUrl, controller: 'TekstCtrl'  };
+        }
+
         $urlRouterProvider.otherwise('/');
         
         $stateProvider
@@ -15,7 +20,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             url:'',
             views: {
               "topp-venstre": forsidelenker,
-              "hovedvindu": { templateUrl: 'templates/velkomstbilde.html'}
+              "hovedvindu": tekst('templates/velkomstbilde.html')
             }
         })
         .state('om', {
@@ -23,14 +28,14 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             views: {
               "topp-venstre": lenker,
               "hovedvindu": bildeSlider,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/meg/om.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/meg/om.html')
             }
         })
         .state('cv', {
             url:'/meg/cv',
             views: {
               "topp-venstre": lenker,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/meg/cv.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/meg/cv.html')
             }
         })
         .state('kontakt', {
@@ -45,7 +50,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             views: {
               "topp-venstre": lenker,
               "hovedvindu": bildeSlider,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/meg/filosofi.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/meg/filosofi.html')
             }
         })
         .state('Barnehage_naturligvis', {
@@ -53,7 +58,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             views: {
               "topp-venstre": lenker,
               "hovedvindu": bildeSlider,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/arkitektur/barnehage-naturligvis.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/arkitektur/barnehage-naturligvis.html')
             }
         })
         .state('Trondheim_litteraturhus', {
@@ -61,7 +66,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             views: {
               "topp-venstre": lenker,
               "hovedvindu": bildeSlider,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/arkitektur/trondheim_litteraturhus.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/arkitektur/trondheim_litteraturhus.html')
             }
         })
         .state('Rom_for_mennesket', {
@@ -69,7 +74,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             views: {
               "topp-venstre": lenker,
               "hovedvindu": bildeSlider,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/arkitektur/rom_for_mennesket.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/arkitektur/rom_for_mennesket.html')
             }
         })
         .state('Moebel_for_barn', {
@@ -77,7 +82,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             views: {
               "topp-venstre": lenker,
               "hovedvindu": bildeSlider,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/arkitektur/moebel_for_barn.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/arkitektur/moebel_for_barn.html')
             }
         })
         .state('Johanneskirken', {
@@ -85,7 +90,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             views: {
               "topp-venstre": lenker,
               "hovedvindu": bildeSlider,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/arkitektur/johanneskirken.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/arkitektur/johanneskirken.html')
             }
         })
         .state('Droemmenes_paviliong', {
@@ -93,7 +98,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             views: {
               "topp-venstre": lenker,
               "hovedvindu": bildeSlider,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/arkitektur/droemmenes_paviliong.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/arkitektur/droemmenes_paviliong.html')
             }
         })
         .state('Tektonik', {
@@ -101,7 +106,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             views: {
               "topp-venstre": lenker,
               "hovedvindu": bildeSlider,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/arkitektur/tektonik.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/arkitektur/tektonik.html')
             }
         })
         .state('Ladestien_Barnehage', {
@@ -109,7 +114,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             views: {
               "topp-venstre": lenker,
               "hovedvindu": bildeSlider,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/arkitektur/ladestien_Barnehage.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/arkitektur/ladestien_Barnehage.html')
             }
         })
         .state('Foto', {
@@ -117,7 +122,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             views: {
               "topp-venstre": lenker,
               "hovedvindu": bildeSlider,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/foto/foto.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/foto/foto.html')
             }
         })
         .state('Streker', {
@@ -125,7 +130,7 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
             views: {
               "topp-venstre": lenker,
               "hovedvindu": bildeSlider,
-              "nede-venstre": { templateUrl: 'templates/nedeVenstre/streker/streker.html' }
+              "nede-venstre": tekst('templates/nedeVenstre/streker/streker.html')
             }
         });
     }

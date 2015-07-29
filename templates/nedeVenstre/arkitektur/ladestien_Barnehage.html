@@ -9,8 +9,11 @@
     </p>
     <p>Veileder: Eileen G. Johnsen og Kine Angelo</p>
 </div>
-<div class="tekst-innhold">
-    <p>
+
+<div id="vis-tekst-innhold" ng-click="lesMer()" ng-class="{'tekst-vises': visTekst}">Les mer >></div>
+<div ng-class="{'visTekst': visTekst}" id="tekst-innhold">
+    <img alt="lukk" width="15px;" ng-click="lukk()" src="bilder/Kryss.gif"/>
+    <div class="columns">
         Ladestien barnehage er en sonebarnehage med tomt på ladestien. 
         Stien blir ført over taket på barnehagen. I barnehagen er det også lagt 
         opp til et samarbeid med kunstnere. Tre ulike atlieer er tegnet for utleie. 
@@ -20,9 +23,8 @@
         de må vise hensyn. Ved hjelp av skyvehyller som ligger i veggene, 
         kan man dele av verkstedsrommet i tre mindre rom. Barnas rom plasseres 
         også ut i uteområdet og gir et inntrykk av hva som er barnehagens område.
-    </p>
-    
-    <p>
+        <div class="mellomrom"></div>
+        
         Flere av barnas rom er laget av fiberarbert plast. 
         Inni plasten vil det være støpt inn stålprofiler. 
         På den måten kan rommene være berende elementer i bygget, 
@@ -31,15 +33,16 @@
         kuleisolasjon som blir støpt inn i plasten. Dette gjør at plasten 
         kan bli gjenomskinnelig,samtidig som stålet gir mørke skygger. 
         Inspirasjonen er hentet fra japanske rislykter.
-    </p>
-    
-    <p>
+        <div class="mellomrom"></div>
+        
         Prosessen  i dette prosjektet har vært veldig gøy, utfordrende og lærerik. 
         Jeg har laget japanske rislykter etter youtubefilmer, 
         jobbet med modeller av gips, såpe og skumpapp, 
         og prosjektert mye gjennom modell og skissering. 
         Bytte av prosjekteringsverktøy har drevet prosjektet fremover.
-    </p>
-    
-
+    </div>
+    <div id="skjul-tekst-innhold" ng-click="lukk()" ng-class="{'tekst-vises': visTekst}">
+        <div class="mellomrom"></div>
+        << Skjul
+    </div>
 </div>

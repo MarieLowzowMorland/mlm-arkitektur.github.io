@@ -8,17 +8,19 @@
     </p>
     <p>Veileder: Eileen G. Johnsen</p>
 </div>
-<div class="tekst-innhold">
-    <p>
+
+<div id="vis-tekst-innhold" ng-click="lesMer()" ng-class="{'tekst-vises': visTekst}">Les mer >></div>
+<div ng-class="{'visTekst': visTekst}" id="tekst-innhold">
+    <img alt="lukk" width="15px;" ng-click="lukk()" src="bilder/Kryss.gif"/>
+    <div class="columns">
         Prosjektet  handlet om å lage en naturbarnehage. For at hver barnegruppe 
         skal være mest mulig omgitt av natur, vil jeg ta fra hverandre den klassiske 
         barnehagen og plassere de ulike barnegruppene på ulike steder ute i naturen. 
         Hvert av stedene har sin karakter med sine kvaliteter. 
         Barna skal kunne dra på besøk til hverandre og på den 
         måten oppleve ulike sider ved naturen i området.
-    </p>
-    
-    <p>
+        <div class="mellomrom"></div>
+
         Alle barnegruppene har noen felles behov. 
         Et sted å gå inn når det er dårlig vær, kjøkken, toaletter, og garderobe. 
         Disse funksjonene vil jeg legge i et bygg jeg kaller kjernen. 
@@ -32,23 +34,30 @@
         (Jeg var for lav) Dette gjorde at de inkluderte meg i aktiviteter og 
         hemmeligheter som barnehagelærerne ikke visste om. 
         Erfaringer fra dette besøket ble viktig for prosjektet.
-    </p>
-    
-    <p class="sitat">
-        ”Hvis man klatrer over gjerdet bak garasjen ved lavoen, rekker man å løpe 
-        så langt at de voksne ikke rekker å ta deg igjen når de oppdager at du er borte”
-    </p>
-    
-    <p class="sitat">
-        ”Kvae er tårene til treet... Det må være ensomt å være et tre, da er det fint at vi leker med det!”
-    </p>
-    
-    <p class="sitat">
-        ”Hvor mange veps har bodd inni her? Det er jo så trangt!” ( et lite vepsebol)
-    </p>
-    
-    <p class="sitat">
-        ”Kom, så skal jeg vise deg en hemmelighet! Hysj, ikke si dette til de vokse. 
-        Vi får egentlig ikke ta på glasskår skjønner du” ( et skattkammer med en samling av glasskår)
-    </p>
+        <div class="mellomrom"></div>
+
+        <div class="sitat">
+            ”Hvis man klatrer over gjerdet bak garasjen ved lavoen, rekker man å løpe så langt at de voksne ikke rekker å ta deg igjen når de oppdager at du er borte”
+        </div>
+        <div class="mellomrom"></div>
+
+        <span class="sitat">
+            ”Kvae er tårene til treet... Det må være ensomt å være et tre, da er det fint at vi leker med det!”
+        </span>
+        <div class="mellomrom"></div>
+
+        <span class="sitat">
+            ”Hvor mange veps har bodd inni her? Det er jo så trangt!” ( et lite vepsebol)
+        </span>
+        <div class="mellomrom"></div>
+
+        <span class="sitat">
+            ”Kom, så skal jeg vise deg en hemmelighet! Hysj, ikke si dette til de vokse. 
+            Vi får egentlig ikke ta på glasskår skjønner du” ( et skattkammer med en samling av glasskår)
+        </span>
+    </div>
+    <div id="skjul-tekst-innhold" ng-click="lukk()" ng-class="{'tekst-vises': visTekst}">
+        <div class="mellomrom"></div>
+        << Skjul
+    </div>
 </div>

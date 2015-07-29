@@ -12,8 +12,11 @@
     
     <p>Veileder: Eli Støa</p>
 </div>
-<div class="tekst-innhold">
-    <p>
+
+<div id="vis-tekst-innhold" ng-click="lesMer()" ng-class="{'tekst-vises': visTekst}">Les mer >></div>
+<div ng-class="{'visTekst': visTekst}" id="tekst-innhold">
+    <img alt="lukk" width="15px;" ng-click="lukk()" src="bilder/Kryss.gif"/>
+    <div class="columns">
         De er vanlige mennesker som deg og meg, men med en uvanlig bakgrunn i 
         norsk sammenheng. Mennesker som først har flyktet fra en umenneskelig 
         situasjon for så  å ha lagt ut på en farefull reise med fare for eget 
@@ -35,5 +38,9 @@
         et sentrum, men kan også virke omsluttende og stenge noe ute. 
         Når man sitter i en sirkel er det heller ingen som sitter i noe høysete, 
         og sirkelen får dermed en symbolverdi for likeverd.
-    </p>
+    </div>
+    <div id="skjul-tekst-innhold" ng-click="lukk()" ng-class="{'tekst-vises': visTekst}">
+        <div class="mellomrom"></div>
+        << Skjul
+    </div>
 </div>

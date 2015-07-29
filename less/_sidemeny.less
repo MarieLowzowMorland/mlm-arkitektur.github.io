@@ -64,6 +64,81 @@
                 color: rgb(145, 160, 87);
                 font-style: italic;
             }
+            
+        }
+    }
+}
+.tekst-innhold-over-bilde(){
+    #skjul-tekst-innhold{
+        display: none;
+    }
+    
+    #tekst-innhold{
+        position: absolute;
+        top: (2*@padding-rundt-innhold + @logo-hoyde);
+        background-color: white;
+        z-index: 0;
+        width: 0px;
+        height: 450px;
+        left: @sidemeny-bredde;
+
+        > .columns{
+            clear: both;
+            padding: 0px 15px 15px 0px;
+            -webkit-columns: @kolonne-bredde @antall-kolonner; /* Chrome, Safari, Opera */
+            -moz-columns: @kolonne-bredde @antall-kolonner; /* Firefox */
+            columns: @kolonne-bredde @antall-kolonner;
+        }
+
+        > img{
+            display: none;
+        }
+
+        &.visTekst{
+            z-index: 1001;
+            width: calc(@antall-kolonner * (@kolonne-bredde + 20px) + 30px);
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+
+            > img{
+                display: inline-block;
+                margin: 3px;
+                padding: 3px;
+                float: right;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: #eee;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}
+.tekst-innhold-kollaps(){
+    #skjul-tekst-innhold{
+        display: none;
+        
+        &.tekst-vises{
+            display: block;
+        }
+    }
+    
+    #vis-tekst-innhold{
+        &.tekst-vises{
+            display: none;
+        }
+    }
+    
+    #tekst-innhold{
+        display: none;
+        
+        &.visTekst{
+            display: block;
+        }
+
+        > img{
+            display: none;
         }
     }
 }
