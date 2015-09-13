@@ -76,6 +76,8 @@
     }
     
     #tekst-innhold{
+        visibility: hidden;
+        overflow: hidden;
         position: absolute;
         top: (2*@padding-rundt-innhold + @logo-hoyde);
         background-color: white;
@@ -97,6 +99,7 @@
         }
 
         &.visTekst{
+            visibility: visible;
             z-index: 1001;
             width: calc(@antall-kolonner * (@kolonne-bredde + 20px) + 30px);
             -webkit-transition: all 0.5s;

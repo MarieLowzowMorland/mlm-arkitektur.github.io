@@ -81,6 +81,8 @@ body {
     display: none;
   }
   body #tekst-innhold {
+    visibility: hidden;
+    overflow: hidden;
     position: absolute;
     top: 145px;
     background-color: white;
@@ -102,6 +104,7 @@ body {
     display: none;
   }
   body #tekst-innhold.visTekst {
+    visibility: visible;
     z-index: 1001;
     width: calc(3 * (250px + 20px) + 30px);
     -webkit-transition: all 0.5s;
@@ -459,6 +462,8 @@ body {
     display: none;
   }
   body #tekst-innhold {
+    visibility: hidden;
+    overflow: hidden;
     position: absolute;
     top: 145px;
     background-color: white;
@@ -480,6 +485,7 @@ body {
     display: none;
   }
   body #tekst-innhold.visTekst {
+    visibility: visible;
     z-index: 1001;
     width: calc(2 * (250px + 20px) + 30px);
     -webkit-transition: all 0.5s;
