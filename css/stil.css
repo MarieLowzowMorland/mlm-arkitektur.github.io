@@ -24,9 +24,6 @@
   z-index: 0;
   background-image: url('../bilder/autogenerert/velkomstbilde.jpg');
 }
-.vis-og-skjul-meny {
-  text-align: center;
-}
 .right-aligned {
   text-align: right;
 }
@@ -76,6 +73,13 @@ body {
     /* Start og pause knapp */
     /* Navigasjonspiler */
     /* Navigasjonsknapper */
+  }
+  body #vis-tekst-innhold.tekst-vises {
+    display: none;
+  }
+  body #vis-tekst-innhold:hover {
+    cursor: pointer;
+    color: #1f1f1f;
   }
   body #skjul-tekst-innhold {
     display: none;
@@ -437,6 +441,13 @@ body {
     /* Navigasjonspiler */
     /* Navigasjonsknapper */
   }
+  body #vis-tekst-innhold.tekst-vises {
+    display: none;
+  }
+  body #vis-tekst-innhold:hover {
+    cursor: pointer;
+    color: #1f1f1f;
+  }
   body #skjul-tekst-innhold {
     display: none;
   }
@@ -797,14 +808,22 @@ body {
     /* Navigasjonspiler */
     /* Navigasjonsknapper */
   }
+  body #vis-tekst-innhold.tekst-vises {
+    display: none;
+  }
+  body #vis-tekst-innhold:hover {
+    cursor: pointer;
+    color: #1f1f1f;
+  }
   body #skjul-tekst-innhold {
     display: none;
   }
   body #skjul-tekst-innhold.tekst-vises {
     display: block;
   }
-  body #vis-tekst-innhold.tekst-vises {
-    display: none;
+  body #skjul-tekst-innhold:hover {
+    cursor: pointer;
+    color: #1f1f1f;
   }
   body #tekst-innhold {
     display: none;
@@ -1131,14 +1150,22 @@ body {
     /* Navigasjonspiler */
     /* Navigasjonsknapper */
   }
+  body #vis-tekst-innhold.tekst-vises {
+    display: none;
+  }
+  body #vis-tekst-innhold:hover {
+    cursor: pointer;
+    color: #1f1f1f;
+  }
   body #skjul-tekst-innhold {
     display: none;
   }
   body #skjul-tekst-innhold.tekst-vises {
     display: block;
   }
-  body #vis-tekst-innhold.tekst-vises {
-    display: none;
+  body #skjul-tekst-innhold:hover {
+    cursor: pointer;
+    color: #1f1f1f;
   }
   body #tekst-innhold {
     display: none;

@@ -71,6 +71,7 @@
     }
 }
 .tekst-innhold-over-bilde(){
+    .vis-og-skjul-les-mer-knapp();
     #skjul-tekst-innhold{
         display: none;
     }
@@ -121,17 +122,17 @@
     }
 }
 .tekst-innhold-kollaps(){
+    .vis-og-skjul-les-mer-knapp();
     #skjul-tekst-innhold{
         display: none;
         
         &.tekst-vises{
             display: block;
         }
-    }
-    
-    #vis-tekst-innhold{
-        &.tekst-vises{
-            display: none;
+            
+        &:hover{
+            cursor: pointer;
+            color: darken(@tittelfarge, 35%);
         }
     }
     
@@ -144,6 +145,20 @@
 
         > img{
             display: none;
+        }
+    }
+}
+
+.vis-og-skjul-les-mer-knapp(){
+    #vis-tekst-innhold{
+        
+        &.tekst-vises{
+            display: none;
+        }
+            
+        &:hover{
+            cursor: pointer;
+            color: darken(@tittelfarge, 35%);
         }
     }
 }
