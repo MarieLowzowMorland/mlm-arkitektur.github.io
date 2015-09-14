@@ -197,10 +197,6 @@ body {
     margin: auto;
     margin-top: calc(50vh - 200px);
     height: auto;
-    -webkit-transition: opacity 1s, width 1s, height 1s;
-    transition: opacity 1s, width 1s, height 1s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
   }
   body .meny-vindu > .meny > a {
     text-decoration: none;
@@ -257,23 +253,6 @@ body {
   }
   body .meny-vindu > .meny > a > div > div.tekst {
     margin: -18px;
-  }
-  body .meny-vindu.ut {
-    -webkit-transition: opacity 1s, width 1s, height 1s;
-    transition: opacity 1s, width 1s, height 1s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  body .meny-vindu.inn {
-    -webkit-transition: opacity 1s, width 1s, height 1s;
-    transition: opacity 1s, width 1s, height 1s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 1;
-    height: auto;
   }
   body .sidemeny {
     position: relative;
@@ -578,10 +557,6 @@ body {
     margin: auto;
     margin-top: calc(50vh - 200px);
     height: auto;
-    -webkit-transition: opacity 1s, width 1s, height 1s;
-    transition: opacity 1s, width 1s, height 1s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
   }
   body .meny-vindu > .meny > a {
     text-decoration: none;
@@ -638,23 +613,6 @@ body {
   }
   body .meny-vindu > .meny > a > div > div.tekst {
     margin: -18px;
-  }
-  body .meny-vindu.ut {
-    -webkit-transition: opacity 1s, width 1s, height 1s;
-    transition: opacity 1s, width 1s, height 1s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  body .meny-vindu.inn {
-    -webkit-transition: opacity 1s, width 1s, height 1s;
-    transition: opacity 1s, width 1s, height 1s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 1;
-    height: auto;
   }
   body .sidemeny {
     position: relative;
@@ -932,11 +890,7 @@ body {
     width: calc(100vw - 80px);
     margin: auto;
     margin-top: calc(50vh - 200px);
-    height: 300px;
-    -webkit-transition: opacity 1s, width 1s, height 1s;
-    transition: opacity 1s, width 1s, height 1s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
+    height: auto;
   }
   body .meny-vindu > .meny > a {
     text-decoration: none;
@@ -993,23 +947,6 @@ body {
   }
   body .meny-vindu > .meny > a > div > div.tekst {
     margin: -18px;
-  }
-  body .meny-vindu.ut {
-    -webkit-transition: opacity 1s, width 1s, height 1s;
-    transition: opacity 1s, width 1s, height 1s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  body .meny-vindu.inn {
-    -webkit-transition: opacity 1s, width 1s, height 1s;
-    transition: opacity 1s, width 1s, height 1s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 1;
-    height: auto;
   }
   body .sidemeny {
     position: relative;
@@ -1287,11 +1224,7 @@ body {
     width: calc(100vw - 80px);
     margin: auto;
     margin-top: calc(50vh - 200px);
-    height: 300px;
-    -webkit-transition: opacity 1s, width 1s, height 1s;
-    transition: opacity 1s, width 1s, height 1s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
+    height: auto;
   }
   body .meny-vindu > .meny > a {
     text-decoration: none;
@@ -1348,23 +1281,6 @@ body {
   }
   body .meny-vindu > .meny > a > div > div.tekst {
     margin: -18px;
-  }
-  body .meny-vindu.ut {
-    -webkit-transition: opacity 1s, width 1s, height 1s;
-    transition: opacity 1s, width 1s, height 1s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  body .meny-vindu.inn {
-    -webkit-transition: opacity 1s, width 1s, height 1s;
-    transition: opacity 1s, width 1s, height 1s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 1;
-    height: auto;
   }
   body .sidemeny {
     position: relative;

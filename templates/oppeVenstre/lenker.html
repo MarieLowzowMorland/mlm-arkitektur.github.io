@@ -1,4 +1,4 @@
-<div class="meny-vindu {{ tranisjon }}">
+<div class="meny-vindu">
     <div id="logo">
         <a ui-sref="om">mlm</a>
         <div>
@@ -15,8 +15,4 @@
     <div class="undermeny" ng-show="menyvalg && undermenyListe[menyvalg] !== undefined">
         <a ng-repeat="valgmulighet in undermenyListe[menyvalg]" ui-sref="{{ valgmulighet.k }}" ng-class="{'aktiv': undermeny === valgmulighet.k}"><div>{{ valgmulighet.v }}</div></a>
     </div>
-</div>
-<div ng-show="tranisjon" class="gjemStorSkjerm vis-og-skjul-meny" ng-switch="menyvisningstatus">
-    <div ng-switch-when="viser" ng-click="endreMeny('ut')">skjul meny</div>
-    <div ng-switch-default ng-click="endreMeny('inn')">vis meny</div>
 </div>

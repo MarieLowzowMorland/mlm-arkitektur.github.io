@@ -1,12 +1,5 @@
 hjemmesideApp.controller('LenkeCtrl', ['$scope', '$state', function($scope, $state) {
         "use strict";
-        $scope.tranisjon = "inn";
-        $scope.menyvisningstatus = "viser";
-        
-        $scope.endreMeny = function(klasse){
-            $scope.menyvisningstatus = klasse === "ut" ? "" : "viser";
-            $scope.tranisjon = klasse;
-        };
         
         $scope.undermenyListe = {
             meg: [

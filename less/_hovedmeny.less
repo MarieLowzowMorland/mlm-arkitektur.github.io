@@ -88,24 +88,10 @@
         width: calc(@sidemeny-bredde - 80px);
         margin: auto;
         margin-top: calc(50vh - 200px);
-        height: @meny-height;
-        .transisjon(1s);
+        height: auto;
 
         > .meny{
             .hoved-meny();
-        }
-
-        &.ut{
-            .transisjon(1s);
-            opacity: 0; 
-            height: 0;
-            overflow: hidden;
-        }
-
-        &.inn{
-            .transisjon(1s);
-            opacity: 1;
-            height: auto;
         }
     }
 }
