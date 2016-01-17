@@ -61,6 +61,14 @@ hjemmesideApp.config(['$stateProvider', '$urlRouterProvider',
               "nede-venstre": tekst('templates/nedeVenstre/arkitektur/barnehage-naturligvis.html')
             }
         })
+        .state('En_ny_sosial_fasade', {
+            url:'/arkitektur/En_ny_sosial_fasade',
+            views: {
+              "topp-venstre": lenker,
+              "hovedvindu": bildeSlider,
+              "nede-venstre": tekst('templates/nedeVenstre/arkitektur/en_ny_sosial_fasade.html')
+            }
+        })
         .state('Trondheim_litteraturhus', {
             url:'/arkitektur/Trondheim_litteraturhus',
             views: {

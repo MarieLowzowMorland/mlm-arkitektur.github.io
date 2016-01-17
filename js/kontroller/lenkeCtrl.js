@@ -16,6 +16,7 @@ hjemmesideApp.controller('LenkeCtrl', ['$scope', '$state', function($scope, $sta
             ],
             arkitektur: [
                 {k:"Barnehage_naturligvis", v:"Barnehage naturligvis"},
+                {k:"En_ny_sosial_fasade", v:"En ny sosial fasade"},
                 {k:"Trondheim_litteraturhus", v:"Trondheim litteraturhus"},
                 {k:"Rom_for_mennesket", v:"Rom for mennesket"},
                 {k:"Moebel_for_barn", v:"Møbel for barn"},
